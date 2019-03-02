@@ -1,0 +1,16 @@
+PODS:
+  - Forms (0.1.0)
+
+DEPENDENCIES:
+  - Forms (from `../`)
+
+EXTERNAL SOURCES:
+  Forms:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Forms: 8b7d40b45ce2bc94e6704023e0ee7b97b46eb365
+
+PODFILE CHECKSUM: 25844e0ad154351495bf4b5e525e0bce4c26ae83
+
+COCOAPODS: 1.6.0

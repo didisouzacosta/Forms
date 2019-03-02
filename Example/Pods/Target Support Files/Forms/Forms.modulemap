@@ -1,0 +1,6 @@
+framework module Forms {
+  umbrella header "Forms-umbrella.h"
+
+  export *
+  module * { export * }
+}
