@@ -11,14 +11,6 @@ public protocol FormSectionRepresentable {
     
     var fields: [FormFieldRepresentable] { get set }
 
-    func replace(_ field: FormFieldRepresentable)
-    
-}
-
-public extension FormSectionRepresentable {
-    
-    public func replace(_ field: FormFieldRepresentable) {
-        
-    }
+    func validate() throws -> Bool
     
 }

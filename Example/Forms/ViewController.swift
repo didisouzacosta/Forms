@@ -14,16 +14,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let fieldA = TextFormField(value: "a")
+        let fieldA = TextFormField(value: "Adriano")
         fieldA.rules = [
-            RequiredFormRule(message: "O campo é obrigatório"),
+            RequiredFormRule(message: "O campo 'fieldA' é obrigatório"),
             ExactLenghFormRule(exactLenght: 7, message: "O campo deve ter exatamente 7 caracters")
         ]
         
+        let fieldB = DateFormField(value: Date())
+        fieldB.rules.append(RequiredFormRule(message: "O campo 'Data' e obrigatório"))
+        
+        let fieldC = DateFormField()
+        fieldC.rules.append(RequiredFormRule(message: "O campo 'Birthday' e obrigatório"))
+        
+        let section = SectionForm(fields: [fieldA, fieldB, fieldC])
+        
         do {
-            print(try fieldA.validate())
+            print(try section.validate())
         } catch {
-            print(error.localizedDescription)
+            print(error)
         }
         
     }

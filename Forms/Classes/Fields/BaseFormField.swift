@@ -35,7 +35,7 @@ public class BaseFormField<T: Equatable>: FormFieldRepresentable {
     
     public func validate() throws -> Bool {
         return try rules.reduce(true) { (result, rule) -> Bool in
-            return try rule.validate(value)
+            return try rule.validate(value) == result
         }
     }
     

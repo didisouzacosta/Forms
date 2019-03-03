@@ -1,4 +1,5 @@
 use_frameworks!
+platform :ios, '10.3'
 
 target 'Forms_Example' do
   pod 'Forms', :path => '../'
