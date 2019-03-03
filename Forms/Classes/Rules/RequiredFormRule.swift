@@ -9,7 +9,7 @@ public class RequiredFormRule: BaseFormRule<EmptyRepresentable> {
     
     @discardableResult
     public override func validate(_ value: EmptyRepresentable?) throws -> Bool {
-        guard let value = value, value.isEmpty == false else { throw message }
+        guard let value = value, value.valueIsEmpty == false else { throw message }
         return true
     }
     

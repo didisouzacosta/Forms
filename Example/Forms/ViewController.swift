@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let fieldA = TextFormField()
+        let fieldA = TextFormField(value: "a")
         fieldA.rules = [
             RequiredFormRule(message: "O campo é obrigatório"),
             ExactLenghFormRule(exactLenght: 7, message: "O campo deve ter exatamente 7 caracters")
