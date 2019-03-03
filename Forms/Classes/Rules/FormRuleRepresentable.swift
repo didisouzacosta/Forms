@@ -7,10 +7,9 @@
 
 public protocol FormRuleRepresentable {
     
-    associatedtype RuleValueType
-    
     var message: String { get }
     
-    func validate(_ value: RuleValueType?) throws -> Bool
+    @discardableResult
+    func validate(_ value: Any?) throws -> Bool
     
 }

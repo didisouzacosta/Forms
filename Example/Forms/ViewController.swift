@@ -15,11 +15,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let fieldA = TextFormField()
-        let fieldB = DateFormField(value: Date())
+        fieldA.rules = [
+            RequiredFormRule(message: "O campo é obrigatório"),
+            ExactLenghFormRule(exactLenght: 7, message: "O campo deve ter exatamente 7 caracters")
+        ]
         
-        let section = FormSection(fields: [fieldA, fieldB])
+        do {
+            print(try fieldA.validate())
+        } catch {
+            print(error.localizedDescription)
+        }
         
-        print(section.isValid)
     }
 
 }

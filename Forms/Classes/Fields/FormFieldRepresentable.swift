@@ -5,10 +5,9 @@
 //  Created by Adriano Souza Costa on 01/03/19.
 //
 
-public protocol FormFieldRepresentable {
+public protocol FormFieldRepresentable: RuleFieldSet {
     
     var identifier: String { get }
-    var isValid: Bool { get }
     var isEnabled: Bool { get }
     
 }
@@ -29,10 +28,6 @@ public extension FormFieldRepresentable {
         objc_setAssociatedObject(self, &AssociatedKeys.identifierKey, newUID, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         
         return newUID
-    }
-    
-    public var isValid: Bool {
-        return true
     }
     
     public func isEqual<F: FormFieldRepresentable>(_ field: F?) -> Bool {

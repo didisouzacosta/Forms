@@ -11,10 +11,34 @@ public protocol CountRepresentable {
     
 }
 
+extension Date: CountRepresentable {
+    
+    public var valueCount: Float {
+        return Float(self.timeIntervalSinceReferenceDate)
+    }
+    
+}
+
+extension Data: CountRepresentable {
+    
+    public var valueCount: Float {
+        return Float(count)
+    }
+    
+}
+
 extension Int: CountRepresentable {
     
     public var valueCount: Float {
         return Float(self)
+    }
+    
+}
+
+extension String: CountRepresentable {
+    
+    public var valueCount: Float {
+        return Float(count)
     }
     
 }

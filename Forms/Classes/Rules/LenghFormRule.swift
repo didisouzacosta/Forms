@@ -5,20 +5,17 @@
 //  Created by Adriano Souza Costa on 02/03/19.
 //
 
-public struct MinLenghFormRule: FormRuleRepresentable {
+public class MinLenghFormRule: BaseFormRule<CountRepresentable> {
     
-    public typealias RuleValueType = CountRepresentable
+    private let min: CountRepresentable
     
-    public var message: String
-    
-    private let min: RuleValueType
-    
-    init(min: RuleValueType, message: String) {
+    public init(min: CountRepresentable, message: String) {
         self.min = min
-        self.message = message
+        super.init(message: message)
     }
     
-    public func validate(_ value: RuleValueType?) throws -> Bool {
+    @discardableResult
+    public override func validate(_ value: CountRepresentable?) throws -> Bool {
         guard let value = value else { return true }
         
         if value.valueCount < min.valueCount {
@@ -30,20 +27,17 @@ public struct MinLenghFormRule: FormRuleRepresentable {
     
 }
 
-public struct MaxLenghFormRule: FormRuleRepresentable {
+public class MaxLenghFormRule: BaseFormRule<CountRepresentable> {
     
-    public typealias RuleValueType = CountRepresentable
+    private let max: CountRepresentable
     
-    public var message: String
-    
-    private let max: RuleValueType
-    
-    init(max: RuleValueType, message: String) {
+    public init(max: CountRepresentable, message: String) {
         self.max = max
-        self.message = message
+        super.init(message: message)
     }
     
-    public func validate(_ value: RuleValueType?) throws -> Bool {
+    @discardableResult
+    public override func validate(_ value: CountRepresentable?) throws -> Bool {
         guard let value = value else { return true }
         
         if value.valueCount > max.valueCount {
@@ -55,23 +49,20 @@ public struct MaxLenghFormRule: FormRuleRepresentable {
     
 }
 
-public struct ExactLenghFormRule: FormRuleRepresentable {
+public class ExactLenghFormRule: BaseFormRule<CountRepresentable> {
     
-    public typealias RuleValueType = CountRepresentable
+    private let exactLenght: CountRepresentable
     
-    public var message: String
-    
-    private let exactLengh: RuleValueType
-    
-    init(exactLengh: RuleValueType, message: String) {
-        self.exactLengh = exactLengh
-        self.message = message
+    public init(exactLenght: CountRepresentable, message: String) {
+        self.exactLenght = exactLenght
+        super.init(message: message)
     }
     
-    public func validate(_ value: RuleValueType?) throws -> Bool {
+    @discardableResult
+    public override func validate(_ value: CountRepresentable?) throws -> Bool {
         guard let value = value else { return true }
         
-        if value.valueCount != exactLengh.valueCount {
+        if value.valueCount != exactLenght.valueCount {
             throw message
         } else {
             return true

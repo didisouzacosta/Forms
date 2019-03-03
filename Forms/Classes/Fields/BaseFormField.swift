@@ -11,6 +11,8 @@ public class BaseFormField<T: Equatable>: FormFieldRepresentable {
     
     // MARK: - Public Variables
     
+    public var rules: [FormRuleRepresentable] = []
+    
     public var value: ValueType {
         didSet { valueChangedHandler?(value, oldValue) }
     }
@@ -23,15 +25,18 @@ public class BaseFormField<T: Equatable>: FormFieldRepresentable {
     public var isEnabledChangedHandler: ((_ newValue: Bool, _ oldValue: Bool) -> Void)?
     
     // MARK: - Private Variables
-    
     // MARK: - Life Cycle
     
     public init(value: ValueType = nil) {
         self.value = value
     }
     
-    public var isValid: Bool {
-        return value != nil
+    // MARK: - Public Methods
+    
+    public func validate() throws -> Bool {
+        return try rules.reduce(true) { (result, rule) -> Bool in
+            return try rule.validate(value)
+        }
     }
     
 }

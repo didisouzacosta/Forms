@@ -21,13 +21,15 @@
 		B1FB8A85743ED911614D3A7A56021228 /* DateFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16EE49A5AF33621C40C2866D826646E /* DateFormField.swift */; };
 		CC08CE20ECBB6CD257226E2AA3C47AD6 /* Forms-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA481FC41DBDACE4B31D3A301950757B /* Forms-dummy.m */; };
 		DB134B4BE6A4380835152FC0E6CD7C3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		E13AE5ED222B576800ABD8A9 /* RuleFieldSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13AE5EC222B576800ABD8A9 /* RuleFieldSet.swift */; };
+		E13AE5F1222BF28800ABD8A9 /* BaseFormRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13AE5F0222BF28700ABD8A9 /* BaseFormRule.swift */; };
 		E1625FE8222954E700F79532 /* FormSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1625FE7222954E700F79532 /* FormSection.swift */; };
 		E1625FEC222AC41800F79532 /* FormRuleRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1625FEB222AC41800F79532 /* FormRuleRepresentable.swift */; };
 		E1625FF2222AC68300F79532 /* RequiredFormRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1625FF1222AC68300F79532 /* RequiredFormRule.swift */; };
 		E1625FF6222B181900F79532 /* String+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1625FF5222B181900F79532 /* String+Error.swift */; };
 		E1625FFC222B1B9200F79532 /* EmptyRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1625FFB222B1B9100F79532 /* EmptyRepresentable.swift */; };
 		E1625FFE222B20EB00F79532 /* LenghFormRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1625FFD222B20EB00F79532 /* LenghFormRule.swift */; };
-		E1626000222B22C600F79532 /* CountRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1625FFF222B22C600F79532 /* CountRepresentable.swift */; };
+		E197C9FB222C0D1B00281C10 /* CountRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1625FFF222B22C600F79532 /* CountRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		D5F3D2A89C2D69488FA0F48484B38F86 /* BaseFormField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseFormField.swift; sourceTree = "<group>"; };
 		D8B299D4763BEC6EC73EF220C3ABE55B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DD40C02C0424C261C2E625781F2A5E34 /* Pods-Forms_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Forms_Example-umbrella.h"; sourceTree = "<group>"; };
+		E13AE5EC222B576800ABD8A9 /* RuleFieldSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleFieldSet.swift; sourceTree = "<group>"; };
+		E13AE5F0222BF28700ABD8A9 /* BaseFormRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseFormRule.swift; sourceTree = "<group>"; };
 		E1625FE7222954E700F79532 /* FormSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSection.swift; sourceTree = "<group>"; };
 		E1625FEB222AC41800F79532 /* FormRuleRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRuleRepresentable.swift; sourceTree = "<group>"; };
 		E1625FF1222AC68300F79532 /* RequiredFormRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredFormRule.swift; sourceTree = "<group>"; };
@@ -247,9 +251,11 @@
 		E1625FEA222AC3FD00F79532 /* Rules */ = {
 			isa = PBXGroup;
 			children = (
+				E13AE5F0222BF28700ABD8A9 /* BaseFormRule.swift */,
 				E1625FEB222AC41800F79532 /* FormRuleRepresentable.swift */,
 				E1625FF1222AC68300F79532 /* RequiredFormRule.swift */,
 				E1625FFD222B20EB00F79532 /* LenghFormRule.swift */,
+				E13AE5EC222B576800ABD8A9 /* RuleFieldSet.swift */,
 			);
 			name = Rules;
 			path = Forms/Classes/Rules;
@@ -451,17 +457,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1625FFE222B20EB00F79532 /* LenghFormRule.swift in Sources */,
+				E13AE5F1222BF28800ABD8A9 /* BaseFormRule.swift in Sources */,
+				E197C9FB222C0D1B00281C10 /* CountRepresentable.swift in Sources */,
 				74ACE45932F2EAF382420D123407F9C9 /* BaseFormField.swift in Sources */,
 				B1FB8A85743ED911614D3A7A56021228 /* DateFormField.swift in Sources */,
 				E1625FE8222954E700F79532 /* FormSection.swift in Sources */,
 				E1625FF6222B181900F79532 /* String+Error.swift in Sources */,
 				3FABE0A9D2F5FDD9D49FEC70D370D51A /* FormFieldRepresentable.swift in Sources */,
-				E1626000222B22C600F79532 /* CountRepresentable.swift in Sources */,
 				E1625FEC222AC41800F79532 /* FormRuleRepresentable.swift in Sources */,
 				CC08CE20ECBB6CD257226E2AA3C47AD6 /* Forms-dummy.m in Sources */,
 				E1625FF2222AC68300F79532 /* RequiredFormRule.swift in Sources */,
 				281F0BE2DD5C3E04BCD0808ECA0B7912 /* FormSectionRepresentable.swift in Sources */,
 				452FB9B9E473DB45302F407F8DA333AE /* TextFormField.swift in Sources */,
+				E13AE5ED222B576800ABD8A9 /* RuleFieldSet.swift in Sources */,
 				E1625FFC222B1B9200F79532 /* EmptyRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

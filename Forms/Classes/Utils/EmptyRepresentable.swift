@@ -14,14 +14,26 @@ public protocol EmptyRepresentable {
 extension String: EmptyRepresentable {}
 extension Data: EmptyRepresentable {}
 
-extension Double: EmptyRepresentable {
-    public var isEmpty: Bool { return self > 0.0 }
+extension Date: EmptyRepresentable {
+    public var isEmpty: Bool { return false }
 }
 
-extension CGFloat: EmptyRepresentable {
-    public var isEmpty: Bool { return self > 0.0 }
+extension Bool: EmptyRepresentable {
+    public var isEmpty: Bool { return self == false }
+}
+
+extension CGPoint: EmptyRepresentable {
+    public var isEmpty: Bool { return false }
+}
+
+extension Double: EmptyRepresentable {
+    public var isEmpty: Bool { return self <= 0.0 }
+}
+
+extension Float: EmptyRepresentable {
+    public var isEmpty: Bool { return self <= 0.0 }
 }
 
 extension Int: EmptyRepresentable {
-    public var isEmpty: Bool { return self > 0 }
+    public var isEmpty: Bool { return self <= 0 }
 }

@@ -10,7 +10,6 @@ import Foundation
 public protocol FormSectionRepresentable {
     
     var fields: [FormFieldRepresentable] { get set }
-    var isValid: Bool { get }
 
     func replace(_ field: FormFieldRepresentable)
     
@@ -18,12 +17,6 @@ public protocol FormSectionRepresentable {
 
 public extension FormSectionRepresentable {
     
-    public var isValid: Bool {
-        return fields.reduce(true) { (result, field) -> Bool in
-            return field.isValid == result
-        }
-    }
-
     public func replace(_ field: FormFieldRepresentable) {
         
     }
