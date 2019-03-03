@@ -14,3 +14,13 @@ public protocol FormSectionRepresentable {
     func validate() throws -> Bool
     
 }
+
+extension FormSectionRepresentable {
+    
+    public func validate() throws -> Bool {
+        return try fields.reduce(true) { (result, field) -> Bool in
+            return try field.validate() == result
+        }
+    }
+    
+}

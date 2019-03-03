@@ -11,6 +11,12 @@ import Forms
 
 class ViewController: UIViewController {
 
+    @IBOutlet private weak var tableView: UITableView?
+    
+    private lazy var form: Form = {
+       return Form(tableView: tableView)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,13 +29,15 @@ class ViewController: UIViewController {
         let fieldB = DateFormField(value: Date())
         fieldB.rules.append(RequiredFormRule(message: "O campo 'Data' e obrigatório"))
         
-        let fieldC = DateFormField()
+        let fieldC = DateFormField(value: Date())
         fieldC.rules.append(RequiredFormRule(message: "O campo 'Birthday' e obrigatório"))
         
-        let section = SectionForm(fields: [fieldA, fieldB, fieldC])
+        let section = SectionForm(fields: fieldA, fieldB, fieldC)
+        
+        form.sections.append(section)
         
         do {
-            print(try section.validate())
+            print(try form.validate())
         } catch {
             print(error)
         }

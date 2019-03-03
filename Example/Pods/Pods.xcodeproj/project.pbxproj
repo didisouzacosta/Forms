@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0193E8F44486D1590782B55A54526DB0 /* LenghFormRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D8223278B975E73CA747EC87BAED25 /* LenghFormRule.swift */; };
 		0CA55CD177138DD71EB3A6DC00A1035B /* RequiredFormRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C6E5E0514FC94B8875D3CC9EFDFBDC /* RequiredFormRule.swift */; };
-		193A6C3A5F53EE14D5A76D01FDF17ADB /* FormSectionRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3CD3BCE5EFD577A53681DB55FFAFC /* FormSectionRepresentable.swift */; };
+		193A6C3A5F53EE14D5A76D01FDF17ADB /* SectionFormRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD3CD3BCE5EFD577A53681DB55FFAFC /* SectionFormRepresentable.swift */; };
 		1B12111E498363D32DD5FB70559D610E /* DateFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7370B43F82E85A732AF8FACFF20E852A /* DateFormField.swift */; };
 		30D4DC1783E710B87AD9570B162E62E4 /* FormErrorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBE6D068A1CA6ED641517DAFFE7921 /* FormErrorRepresentable.swift */; };
 		310EE40E7477C0AECC51F44FD33AEDBB /* SectionForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F517563E101268BD8A65588E83359B /* SectionForm.swift */; };
@@ -27,6 +27,8 @@
 		B136A3C240F63144311919CECF929DDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		B367660B5A04B461E6B20595F6B239F3 /* Forms-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2548D76ABB8EEA4677BDEEC5AFB965D4 /* Forms-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D1A72A45A122E91C30CC2FB68C86F01A /* EmptyRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E48943B03A53B0F0048CDB0AA4DCE8E /* EmptyRepresentable.swift */; };
+		E197CA09222C2B9800281C10 /* FormRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197CA08222C2B9800281C10 /* FormRepresentable.swift */; };
+		E197CA0B222C2DF200281C10 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197CA0A222C2DF200281C10 /* Form.swift */; };
 		E3B1223BCF9B7469C6122C5B67736E31 /* FormFieldRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311127506497E1C3C654CBAFD306953 /* FormFieldRepresentable.swift */; };
 		EADFF80E02E2E9E95F2C6E756EEF60F3 /* BaseFormRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5761160282441876F944B064777D2A /* BaseFormRule.swift */; };
 		FCA3427C49A7852EB8CE4993912C192B /* CountRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486B82486D2F5BB096F57829A2A36B18 /* CountRepresentable.swift */; };
@@ -52,33 +54,33 @@
 /* Begin PBXFileReference section */
 		02CBE6D068A1CA6ED641517DAFFE7921 /* FormErrorRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormErrorRepresentable.swift; sourceTree = "<group>"; };
 		0CE4F01750CD216D20227A049CFBED3D /* Pods-Forms_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Forms_Example-frameworks.sh"; sourceTree = "<group>"; };
-		0D33FD84F0771A8C168D0119F91CCA0C /* Pods_Forms_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Forms_Example.framework; path = "Pods-Forms_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D33FD84F0771A8C168D0119F91CCA0C /* Pods_Forms_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Forms_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1118AC80E75894A999EA83D8E0370CB7 /* Pods-Forms_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Forms_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		11AA51A775DB13D15F4A7E5A59BA3527 /* Pods-Forms_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Forms_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		20D84A94AB847376FBDB6C398B73762F /* Forms.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Forms.xcconfig; sourceTree = "<group>"; };
 		23CCABCE99A2BF4A3138F48AE5DC2F12 /* Pods-Forms_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Forms_Tests-Info.plist"; sourceTree = "<group>"; };
 		2548D76ABB8EEA4677BDEEC5AFB965D4 /* Forms-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Forms-umbrella.h"; sourceTree = "<group>"; };
 		25B7E77D629B4382C90162C19FD052EA /* Forms-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Forms-Info.plist"; sourceTree = "<group>"; };
-		25C04A9DC371565B976A0EF34626DC2D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		25C04A9DC371565B976A0EF34626DC2D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		486B82486D2F5BB096F57829A2A36B18 /* CountRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CountRepresentable.swift; sourceTree = "<group>"; };
 		4916FD3A4A999203DF7E75CC611AE8D8 /* Pods-Forms_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Forms_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4D6F1A2D7525370F063EBC216F82FAAD /* RuleFieldSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RuleFieldSet.swift; sourceTree = "<group>"; };
 		547FAFF8F73EE2F7EADC9D0C1EF7A732 /* Pods-Forms_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Forms_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		5A1DB1A461EF837A363B9BE9BD454DE4 /* Forms.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Forms.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5A1DB1A461EF837A363B9BE9BD454DE4 /* Forms.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Forms.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7370B43F82E85A732AF8FACFF20E852A /* DateFormField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DateFormField.swift; sourceTree = "<group>"; };
 		76C6E5E0514FC94B8875D3CC9EFDFBDC /* RequiredFormRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RequiredFormRule.swift; sourceTree = "<group>"; };
 		784B74D4B9915E3BC1B0079DD498F8E6 /* Pods-Forms_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Forms_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7CA9FD95338C8734166213B4FE5C6792 /* Forms.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Forms.modulemap; sourceTree = "<group>"; };
 		7D3D44664613FB6E4E9641AB9A9CD3A0 /* TextFormField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFormField.swift; sourceTree = "<group>"; };
-		7DD3CD3BCE5EFD577A53681DB55FFAFC /* FormSectionRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormSectionRepresentable.swift; sourceTree = "<group>"; };
-		8C7B0F0346CAA18F6B91C1131278C977 /* Forms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Forms.framework; path = Forms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DD3CD3BCE5EFD577A53681DB55FFAFC /* SectionFormRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SectionFormRepresentable.swift; sourceTree = "<group>"; };
+		8C7B0F0346CAA18F6B91C1131278C977 /* Forms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Forms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F54A337198D30B337D21F77D0551521 /* Pods-Forms_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Forms_Tests-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E48943B03A53B0F0048CDB0AA4DCE8E /* EmptyRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmptyRepresentable.swift; sourceTree = "<group>"; };
-		A4712B98C0D6B2A7D8BBE9DF1D00DDB5 /* Pods_Forms_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Forms_Tests.framework; path = "Pods-Forms_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4712B98C0D6B2A7D8BBE9DF1D00DDB5 /* Pods_Forms_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Forms_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A85B15576623885072B7F073CD7CBE9A /* Pods-Forms_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Forms_Example-dummy.m"; sourceTree = "<group>"; };
 		AD2E3F7055273F7872F9F5D0FD72BEA5 /* Forms-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Forms-prefix.pch"; sourceTree = "<group>"; };
-		B36376D8DB9A980E972125D320D952D9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		B36376D8DB9A980E972125D320D952D9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		BE5761160282441876F944B064777D2A /* BaseFormRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseFormRule.swift; sourceTree = "<group>"; };
 		C1D8223278B975E73CA747EC87BAED25 /* LenghFormRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LenghFormRule.swift; sourceTree = "<group>"; };
 		C2E2526ABB6AC1B8690B34FF10CD568B /* Pods-Forms_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Forms_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +94,8 @@
 		D3CC78CDB15791F5CF53249322DAA3F9 /* Pods-Forms_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Forms_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD40C02C0424C261C2E625781F2A5E34 /* Pods-Forms_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Forms_Example-umbrella.h"; sourceTree = "<group>"; };
 		E142CE3DFC38D8880AE2291CC4B9849A /* Forms-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Forms-dummy.m"; sourceTree = "<group>"; };
+		E197CA08222C2B9800281C10 /* FormRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRepresentable.swift; sourceTree = "<group>"; };
+		E197CA0A222C2DF200281C10 /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		EE0EF60E7033245A6FE72B1AB84AB877 /* BaseFormField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseFormField.swift; sourceTree = "<group>"; };
 		EFFADC38715206913EBB0C9628D87B56 /* Pods-Forms_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Forms_Tests-dummy.m"; sourceTree = "<group>"; };
 		F311127506497E1C3C654CBAFD306953 /* FormFieldRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormFieldRepresentable.swift; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 		3C7B74CCB5D91F8F63E895D026EA4E55 /* Forms */ = {
 			isa = PBXGroup;
 			children = (
+				E197CA0C222C491F00281C10 /* Extensions */,
+				E197CA07222C2B8A00281C10 /* Form */,
 				2A455970F7622350BACC174094740438 /* Fields */,
 				1AA5C1F29736F4F07CCBFC3873CD4303 /* Pod */,
 				35AF56084A7B03077E71B730A0F5B530 /* Rules */,
@@ -212,7 +218,7 @@
 		5408EE9FB705CDE57A629B21494E5259 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				7DD3CD3BCE5EFD577A53681DB55FFAFC /* FormSectionRepresentable.swift */,
+				7DD3CD3BCE5EFD577A53681DB55FFAFC /* SectionFormRepresentable.swift */,
 				D1F517563E101268BD8A65588E83359B /* SectionForm.swift */,
 			);
 			name = Sections;
@@ -294,6 +300,24 @@
 			);
 			name = "Pods-Forms_Tests";
 			path = "Target Support Files/Pods-Forms_Tests";
+			sourceTree = "<group>";
+		};
+		E197CA07222C2B8A00281C10 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				E197CA08222C2B9800281C10 /* FormRepresentable.swift */,
+				E197CA0A222C2DF200281C10 /* Form.swift */,
+			);
+			name = Form;
+			path = Forms/Classes/Form;
+			sourceTree = "<group>";
+		};
+		E197CA0C222C491F00281C10 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			path = Forms/Classes/Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,14 +473,16 @@
 			files = (
 				60EC207CF104A75B28A4FC92BD35EE94 /* BaseFormField.swift in Sources */,
 				EADFF80E02E2E9E95F2C6E756EEF60F3 /* BaseFormRule.swift in Sources */,
+				E197CA09222C2B9800281C10 /* FormRepresentable.swift in Sources */,
 				FCA3427C49A7852EB8CE4993912C192B /* CountRepresentable.swift in Sources */,
 				1B12111E498363D32DD5FB70559D610E /* DateFormField.swift in Sources */,
 				D1A72A45A122E91C30CC2FB68C86F01A /* EmptyRepresentable.swift in Sources */,
+				E197CA0B222C2DF200281C10 /* Form.swift in Sources */,
 				30D4DC1783E710B87AD9570B162E62E4 /* FormErrorRepresentable.swift in Sources */,
 				E3B1223BCF9B7469C6122C5B67736E31 /* FormFieldRepresentable.swift in Sources */,
 				35E1D3A4DD0EBC1FF873929E7A40E9A6 /* FormRuleRepresentable.swift in Sources */,
 				76680B33FE3400D2CDD177D64DE71AB4 /* Forms-dummy.m in Sources */,
-				193A6C3A5F53EE14D5A76D01FDF17ADB /* FormSectionRepresentable.swift in Sources */,
+				193A6C3A5F53EE14D5A76D01FDF17ADB /* SectionFormRepresentable.swift in Sources */,
 				0193E8F44486D1590782B55A54526DB0 /* LenghFormRule.swift in Sources */,
 				0CA55CD177138DD71EB3A6DC00A1035B /* RequiredFormRule.swift in Sources */,
 				7B52583FF7C5F50403C86A6219C30018 /* RuleFieldSet.swift in Sources */,
@@ -544,8 +570,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
