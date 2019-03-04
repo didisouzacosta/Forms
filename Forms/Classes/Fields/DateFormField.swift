@@ -7,6 +7,10 @@
 
 final public class DateFormField: BaseFormField<Date> {
     
+    public override var cell: FormCell {
+        return DateFormFieldCell()
+    }
+    
     public var date: ValueType {
         get { return value }
         set { value = newValue }

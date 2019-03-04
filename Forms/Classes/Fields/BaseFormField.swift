@@ -21,6 +21,10 @@ public class BaseFormField<T: Equatable>: FormFieldRepresentable {
         didSet { isEnabledChangedHandler?(isEnabled, oldValue) }
     }
     
+    public var cell: FormCell {
+        fatalError("Override this property 'cell'.")
+    }
+    
     public var valueChangedHandler: ((_ newValue: ValueType, _ oldValue: ValueType) -> Void)?
     public var isEnabledChangedHandler: ((_ newValue: Bool, _ oldValue: Bool) -> Void)?
     

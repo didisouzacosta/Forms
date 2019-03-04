@@ -31,6 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '10.3'
 
   s.source_files = 'Forms/Classes/**/*'
+  s.resources = 'Forms/Assets/**/*'
   
   # s.resource_bundles = {
   #   'Forms' => ['Forms/Assets/*.png']

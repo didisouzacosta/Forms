@@ -9,6 +9,7 @@ public protocol FormFieldRepresentable: RuleFieldSet {
     
     var identifier: String { get }
     var isEnabled: Bool { get }
+    var cell: FormCell { get }
     
 }
 

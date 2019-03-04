@@ -7,6 +7,10 @@
 
 final public class TextFormField: BaseFormField<String> {
     
+    public override var cell: FormCell {
+        return TextFormFieldCell()
+    }
+    
     public var text: ValueType {
         get { return value }
         set { value = newValue }

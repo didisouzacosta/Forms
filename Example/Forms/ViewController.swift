@@ -11,7 +11,7 @@ import Forms
 
 class ViewController: UIViewController {
 
-    @IBOutlet private weak var tableView: UITableView?
+    @IBOutlet private weak var tableView: UITableView!
     
     private lazy var form: Form = {
        return Form(tableView: tableView)
@@ -33,8 +33,11 @@ class ViewController: UIViewController {
         fieldC.rules.append(RequiredFormRule(message: "O campo 'Birthday' e obrigatório"))
         
         let section = SectionForm(fields: fieldA, fieldB, fieldC)
+        let sectionB = SectionForm(fields: fieldA, fieldA)
+        let sectionC = SectionForm(fields: fieldB, fieldB, fieldB, fieldB, fieldB, fieldB)
+        let sectionD = SectionForm(fields: fieldA, fieldA, fieldB, fieldB, fieldB, fieldB, fieldB, fieldB)
         
-        form.sections.append(section)
+        form.sections.append(contentsOf: [section, sectionB, sectionC, sectionD, section, sectionB, sectionC, sectionD])
         
         do {
             print(try form.validate())
