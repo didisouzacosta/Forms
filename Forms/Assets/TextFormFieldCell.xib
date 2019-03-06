@@ -11,31 +11,53 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="95" id="yMU-DO-KwA" customClass="TextFormFieldCell" customModule="Forms" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="122" id="yMU-DO-KwA" customClass="TextFormFieldCell" customModule="Forms" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="122"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yMU-DO-KwA" id="oTh-zJ-e03">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="94.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="121.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aq7-DY-WcQ">
-                        <rect key="frame" x="20" y="20" width="335" height="30"/>
-                        <nil key="textColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="DoK-Ka-pu7">
+                        <rect key="frame" x="16" y="12" width="343" height="81"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpw-3E-Hmy">
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="14.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aq7-DY-WcQ">
+                                <rect key="frame" x="0.0" y="20.5" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HbY-yP-jfi"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mF1-xw-vcn">
+                                <rect key="frame" x="0.0" y="66.5" width="343" height="14.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Aq7-DY-WcQ" secondAttribute="bottom" constant="20" id="3pc-ir-6IY"/>
-                    <constraint firstAttribute="trailing" secondItem="Aq7-DY-WcQ" secondAttribute="trailing" constant="20" id="FcP-6i-QTe"/>
-                    <constraint firstItem="Aq7-DY-WcQ" firstAttribute="top" secondItem="oTh-zJ-e03" secondAttribute="top" constant="20" id="Hfb-Rb-XaL"/>
-                    <constraint firstItem="Aq7-DY-WcQ" firstAttribute="leading" secondItem="oTh-zJ-e03" secondAttribute="leading" constant="20" id="u8Q-le-Qfe"/>
+                    <constraint firstItem="DoK-Ka-pu7" firstAttribute="leading" secondItem="oTh-zJ-e03" secondAttribute="leading" constant="16" id="4o1-8W-CAT"/>
+                    <constraint firstItem="DoK-Ka-pu7" firstAttribute="top" secondItem="oTh-zJ-e03" secondAttribute="top" constant="12" id="WR5-4h-mUv"/>
+                    <constraint firstAttribute="trailing" secondItem="DoK-Ka-pu7" secondAttribute="trailing" constant="16" id="gzp-Fg-DLf"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DoK-Ka-pu7" secondAttribute="bottom" constant="4" id="rhA-VZ-v0A"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="textField" destination="Aq7-DY-WcQ" id="NbX-jT-bWJ"/>
+                <outlet property="errorLabel" destination="mF1-xw-vcn" id="cGl-Sh-ROr"/>
+                <outlet property="labelLabel" destination="Hpw-3E-Hmy" id="crE-Rg-wkh"/>
+                <outlet property="valueLabel" destination="Aq7-DY-WcQ" id="JhR-AD-Htt"/>
             </connections>
-            <point key="canvasLocation" x="-31.199999999999999" y="116.49175412293854"/>
+            <point key="canvasLocation" x="-116" y="31"/>
         </tableViewCell>
     </objects>
 </document>

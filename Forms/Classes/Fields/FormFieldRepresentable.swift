@@ -5,9 +5,13 @@
 //  Created by Adriano Souza Costa on 01/03/19.
 //
 
+import UIKit
+
 public protocol FormFieldRepresentable: RuleFieldSet {
     
     var identifier: String { get }
+    var label: String { get }
+    var placeholder: String? { get }
     var isEnabled: Bool { get }
     var cell: FormCell { get }
     

@@ -20,19 +20,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let fieldA = TextFormField(value: "Adriano")
+        let fieldA = TextFormField(label: "Nome", placeholder: "Insira seu nome aqui")
         fieldA.rules = [
             RequiredFormRule(message: "O campo 'fieldA' é obrigatório"),
             ExactLenghFormRule(exactLenght: 7, message: "O campo deve ter exatamente 7 caracters")
         ]
         
-        let fieldB = DateFormField(value: Date())
+        let fieldB = DateFormField(value: Date(), label: "Nascimento") { print("Primeiro field de date") }
         fieldB.rules.append(RequiredFormRule(message: "O campo 'Data' e obrigatório"))
         
-        let fieldC = DateFormField(value: Date())
+        let fieldC = DateFormField(value: Date(), label: "Nascimento") { print("Segundo field de date") }
         fieldC.rules.append(RequiredFormRule(message: "O campo 'Birthday' e obrigatório"))
         
-        let section = SectionForm(fields: fieldA, fieldB, fieldC)
+        let fieldD = SwitchFormField(label: "É hipertenso ou cadiáco?")
+        let fieldE = SwitchFormField(label: "Tem histórico de diabetes na família?")
+        let fieldF = SwitchFormField(value: true, label: "Está acima do peso?")
+        
+        let section = SectionForm(fields: fieldA, fieldB, fieldC, fieldD, fieldE, fieldF)
         let sectionB = SectionForm(fields: fieldA, fieldA)
         let sectionC = SectionForm(fields: fieldB, fieldB, fieldB, fieldB, fieldB, fieldB)
         let sectionD = SectionForm(fields: fieldA, fieldA, fieldB, fieldB, fieldB, fieldB, fieldB, fieldB)

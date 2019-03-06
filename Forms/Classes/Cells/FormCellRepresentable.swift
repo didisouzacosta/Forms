@@ -15,5 +15,6 @@ public protocol FormCellRepresentable {
     var nib: UINib { get }
     
     func setup(with field: FormFieldRepresentable)
+    func updateLayout()
     
 }

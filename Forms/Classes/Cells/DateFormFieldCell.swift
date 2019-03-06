@@ -7,17 +7,27 @@
 
 import UIKit
 
-public class DateFormFieldCell: BaseFormFieldCell<DateFormField> {
+public class DateFormFieldCell: BaseFormFieldCell<DateFormField>, FormFieldCellSelectable {
     
-    @IBOutlet private weak var detailLabel: UILabel?
+    @IBOutlet private weak var labelLabel: UILabel?
+    @IBOutlet private weak var errorLabel: UILabel?
+    @IBOutlet private weak var valueLabel: UILabel?
+    
+    override var labelOutlet: UILabel? { return labelLabel }
+    override var errorOutlet: UILabel? { return errorLabel }
+    override var stackOutlet: UIStackView? { return nil }
+    
+    public var handler: (() -> Void)?
     
     public override func setup(with field: DateFormField?) {
+        handler = field?.handler
+        
         guard let date = field?.date else { return }
         
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         
-        detailLabel?.text = formatter.string(from: date)
+        valueLabel?.text = formatter.string(from: date)
     }
     
 }

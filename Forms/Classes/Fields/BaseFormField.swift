@@ -13,26 +13,22 @@ public class BaseFormField<T: Equatable>: FormFieldRepresentable {
     
     public var rules: [FormRuleRepresentable] = []
     
-    public var value: ValueType {
-        didSet { valueChangedHandler?(value, oldValue) }
-    }
-    
-    public var isEnabled: Bool = true {
-        didSet { isEnabledChangedHandler?(isEnabled, oldValue) }
-    }
+    public var value: ValueType
+    public var label: String
+    public var placeholder: String?
+    public var isEnabled: Bool = true
     
     public var cell: FormCell {
         fatalError("Override this property 'cell'.")
     }
     
-    public var valueChangedHandler: ((_ newValue: ValueType, _ oldValue: ValueType) -> Void)?
-    public var isEnabledChangedHandler: ((_ newValue: Bool, _ oldValue: Bool) -> Void)?
-    
     // MARK: - Private Variables
     // MARK: - Life Cycle
     
-    public init(value: ValueType = nil) {
+    public init(value: ValueType = nil, label: String, placeholder: String? = nil) {
         self.value = value
+        self.label = label
+        self.placeholder = placeholder
     }
     
     // MARK: - Public Methods

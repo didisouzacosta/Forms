@@ -46,9 +46,9 @@ public class Form: NSObject, FormRepresentable {
 extension Form: UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? FormFieldCellSelectable else { return }
+        cell.handler?()
         tableView.deselectRow(at: indexPath, animated: true)
-        let field = sections[indexPath.section].fields[indexPath.row]
-        print(field)
     }
     
 }
