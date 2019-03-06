@@ -7,41 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		034DD9D3F5A66851D5B88AE4CAA0FC2D /* EmptyRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3128658C8234F80BE2F728DAF973504E /* EmptyRepresentable.swift */; };
-		06D45F2D83371C1FCA0FC0F4DA1262CA /* FormRuleRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485AC4BFF2118607FE23AFF4384C537 /* FormRuleRepresentable.swift */; };
-		1343ADA8A9A860E315DF64868845D8C3 /* SwitchFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C3127CC135FADC0C41804AC5A64AAD /* SwitchFormField.swift */; };
-		1E940F58D1F0C965FB155AF0E08B1FDD /* BaseFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271297E5D1C9C1D58CE94370805FDBC5 /* BaseFormField.swift */; };
-		2814E70A0E4CAA1BC27B05FAE35F1758 /* Forms-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE01BF65A5E64BDF168B3E106DB16C /* Forms-dummy.m */; };
-		29C798DC016DF75669E34796E23C0802 /* LenghFormRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F7AF9120E56BF07B0A9F4B59F98514 /* LenghFormRule.swift */; };
-		37EA8B6BFB7B78056EEA3D3A7B35A343 /* FormFieldRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7761D5F91A8F3AB78F2F3CCE88E8844 /* FormFieldRepresentable.swift */; };
+		0A6C927405D9DB6EBD4E35210F3EA853 /* BaseFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D50E876B5EB55BC58E3E9F5DE6200C4 /* BaseFormField.swift */; };
+		1E5BF3E75378C7ECA876B5C3521BC778 /* SectionForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089B8153F5ABD520BF5EC63EBC0F350E /* SectionForm.swift */; };
+		271FD8A07D860B48CAED4E33D6185605 /* Forms-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1923B6E3403895BAA93D10671A85EB /* Forms-dummy.m */; };
+		286842E25B2C2ABE64F484C2ABE6050E /* BaseFormRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B0B727F74FC72804E1F2591C69517E /* BaseFormRule.swift */; };
+		34E2C556792314156F8F112A9AB88944 /* SwitchFormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE798917BAEBD079DED770D487454BE /* SwitchFormFieldCell.swift */; };
+		3546AC6AFD60B8E60C4C720A1FD88FE1 /* TextFormFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17BA373B791AC5B54DDAB3B618F1722 /* TextFormFieldCell.xib */; };
 		3BB03CAD264D5F25B7C5CC38E9964E87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		3E58A889D891020B84EE2957279819E3 /* TextFormFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3885421481D9E8073503275DB93D04C9 /* TextFormFieldCell.xib */; };
-		48F1CDE631C919DFEE9B81EEFA4F698A /* BaseFormRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45601BCF1ADEC33CBB1461B8B34107D /* BaseFormRule.swift */; };
 		50D4958BB8307ECD9A5EAB51C8DBE514 /* Pods-Forms_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A85B15576623885072B7F073CD7CBE9A /* Pods-Forms_Example-dummy.m */; };
+		54692606F39CA444E78D8B3B96CDF5F2 /* RequiredFormRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B05E9F182FDABE4B8D5D64F70EEEF03 /* RequiredFormRule.swift */; };
+		55DF40AED443BC50CB7B143CFA02182D /* CountRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD66C5C8115C742B24EC106F04F836A /* CountRepresentable.swift */; };
+		5974C6153C2F7A3FAC4E15443599A0B3 /* LenghFormRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F918B9D0C1C90E48D7C2DE1C8E170E8B /* LenghFormRule.swift */; };
+		6203A7B1F4779869D8FA839B98DC65A0 /* RuleFieldSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069C14AD7030C7C8549A4D2D45951D17 /* RuleFieldSet.swift */; };
 		6386A32FA0080EE01DE2398CBD1C6FB9 /* Pods-Forms_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F54A337198D30B337D21F77D0551521 /* Pods-Forms_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		788D80F655D7EBE26FA7F052F20D6684 /* SectionForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2776DCC342B9BE9EFD6224217438A114 /* SectionForm.swift */; };
-		7A2D4120900BFF751722352DDF4BFD9A /* FormRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B62B440D6B8532EF53941258C0FB1BE /* FormRepresentable.swift */; };
-		80F2DE04BC9751CC9EBD07F2A442FF97 /* Forms-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E4FFA258E34665908134C156A177963B /* Forms-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		81AB031BDBB11517DE807CBC58F40717 /* FormCellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD951D5409783ECF565E1A068C329B5 /* FormCellRepresentable.swift */; };
-		92CE8B25168F41CFA7FE494F14104B7E /* FormErrorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A48ADE19DEEAF2F6BB64774E68DB20 /* FormErrorRepresentable.swift */; };
-		9A50E9CD452A10177177CEB2760C6486 /* BaseFormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09319D25A265A0F3574B97E4C02E7D76 /* BaseFormFieldCell.swift */; };
+		64B3D6D8D785729EB119F862D4061876 /* TextFormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A95C0EC53F9F8046C2E63B792B8FD36 /* TextFormFieldCell.swift */; };
+		6F9B5EB6193FB1F77F1242F204E6C59E /* FormRuleRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDFBA2C3D9888FAB25DE3743EDEC3CA /* FormRuleRepresentable.swift */; };
+		719AE0C6391B59C7B990B818112FE510 /* FormFieldRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BB8F55A35CF70A2EC4643595374915 /* FormFieldRepresentable.swift */; };
+		7341A464E5BB0B7B8F9626EEF1720B93 /* SwitchFormFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D25F78DCDD9ECC80CA7A66E092CB884 /* SwitchFormFieldCell.xib */; };
+		90A2B3034FDF4C463BA04F6AAE313164 /* Forms-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E570660B9F9BC0F50A240C808423EE /* Forms-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DE3F0850BAC6AD449C2D90356E26153 /* Pods-Forms_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFADC38715206913EBB0C9628D87B56 /* Pods-Forms_Tests-dummy.m */; };
+		9DFDA39027354F29FD1D07686E8971D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		A294DF6F4ECD4D9BE30E794D377D511F /* Pods-Forms_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD40C02C0424C261C2E625781F2A5E34 /* Pods-Forms_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ABA62B9505040C4CBEC35FE55D0E8CF7 /* TextFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF17269020D6F7696A2A5E572D6E0854 /* TextFormField.swift */; };
+		A5DECA3B4D230972C41BC82D2DB3C2D4 /* SectionFormRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B1E7602ED8E35B6F190668E69EF29B /* SectionFormRepresentable.swift */; };
+		A8454C291E38063F1DAE1AF0570B99DB /* DateFormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A118F4BB1D89894CCE662BB9410571 /* DateFormFieldCell.swift */; };
+		AF95D5E200777B55788183AAAFE68D7C /* DateFormFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A2E400C2DD74C857AA127007E4CA2A /* DateFormFieldCell.xib */; };
 		B136A3C240F63144311919CECF929DDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		B6C8FC0CE75FCF7009CD6323F2ED3906 /* DateFormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CF73E80BE49F19662BB58653A0C43D /* DateFormFieldCell.swift */; };
-		B9A0D411CED9E0AAB4926CA2BCFE4591 /* SectionFormRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DCE8CADEF9EDE4993444A69C2DA890 /* SectionFormRepresentable.swift */; };
-		C3A28665D278E77480AC0D177ED0D5C1 /* TextFormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9608AD0B99279EEF40DA85783B2F5B /* TextFormFieldCell.swift */; };
-		CB83D3545B1942D42D2317271E10E80E /* RuleFieldSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7CE61EA242A83A35D8BD9114F8456D /* RuleFieldSet.swift */; };
-		D0A472F10CF5E80C5AB7351C3EBC0316 /* SwitchFormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46E3F8C8DEE089135331A65478BE2A1 /* SwitchFormFieldCell.swift */; };
-		D28082E4F03CC5D975C18DF67AE43B29 /* DateFormFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA2F30D28C09EA364EBD6B71936EFCA /* DateFormFieldCell.xib */; };
-		D7AB619F1C4E6EEE8B700035C44C57C9 /* RequiredFormRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0105D084D0AE4A3E7A018E193E762A98 /* RequiredFormRule.swift */; };
-		DED48D4902DFE62B8C03E47D6729FD42 /* CountRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297065270F4BADEEF7EA588603F5CAB9 /* CountRepresentable.swift */; };
-		E16964DF222FEB6800DCDB90 /* FormFieldCellSelectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16964DE222FEB6800DCDB90 /* FormFieldCellSelectable.swift */; };
-		E38295B06086CA3099A433AF5D18AF17 /* SwitchFormFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22B210B65636A615615B4749CEC4E91 /* SwitchFormFieldCell.xib */; };
-		F27F403877A858C4706F6CA03D8D858F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		F56F2D5F398CDA1050BC1F99D4B73385 /* DateFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067A87D54EC06225A5D4F33C5FE1B868 /* DateFormField.swift */; };
-		FF767265F09436F6807A47C99C2310C8 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48605EF5496475F3A75BD46EEB39D780 /* Form.swift */; };
+		B7A61889804141D333E901ED91080D78 /* FormErrorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5801C9C7CDC12815E02A3DCE4E42783 /* FormErrorRepresentable.swift */; };
+		BC1E0DB3A657107C7C680C0956EF7FFD /* DateFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952D730CAF4C7457BC3ADE643D960B87 /* DateFormField.swift */; };
+		C122021A6CA0312467C84929BA5053C9 /* FormFieldCellSelectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6C2254791ED26EF858C8D9857FE8AC /* FormFieldCellSelectable.swift */; };
+		CE28AE718C991646F72BE71BDB49C541 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702B683CB3D312122461AF5E5834424F /* Form.swift */; };
+		D61749F30F257DF5B8374E142AD59B0C /* SwitchFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78087F981B286D7712FD238E88E20E6 /* SwitchFormField.swift */; };
+		DC0AE51036DD80FDFC90515203ADFEB4 /* TextFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE490C1B42A2804655BF04AFD0148F /* TextFormField.swift */; };
+		EB70C16EE1D3616D7D0B0F9E5E4E7D74 /* FormCellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9322483703FAF960AE63AAC5086E3B /* FormCellRepresentable.swift */; };
+		EF14D7D4FFD4387C307F9F239E9967D1 /* BaseFormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C06CE046269D5E82B8B2233188B14 /* BaseFormFieldCell.swift */; };
+		F00F6AEA20320336D93097654A2EAA8A /* EmptyRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C064F89A9533B8750D76066E102BFB5A /* EmptyRepresentable.swift */; };
+		F4DC9EE2A613977821AFB2E3424185A1 /* FormRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B02D01ABAEA53156268861C5CF2ADA /* FormRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 633A6FA7BB3231E8F05F7D0DA7217B9F;
+			remoteGlobalIDString = 845AD2997BC2BBAAED418C0F5392E736;
 			remoteInfo = Forms;
 		};
 		B0108E9C6B7AA6856468BDED4C00B5E9 /* PBXContainerItemProxy */ = {
@@ -62,74 +62,66 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0105D084D0AE4A3E7A018E193E762A98 /* RequiredFormRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RequiredFormRule.swift; sourceTree = "<group>"; };
-		067A87D54EC06225A5D4F33C5FE1B868 /* DateFormField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DateFormField.swift; sourceTree = "<group>"; };
-		09319D25A265A0F3574B97E4C02E7D76 /* BaseFormFieldCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseFormFieldCell.swift; sourceTree = "<group>"; };
-		0CD951D5409783ECF565E1A068C329B5 /* FormCellRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormCellRepresentable.swift; sourceTree = "<group>"; };
+		069C14AD7030C7C8549A4D2D45951D17 /* RuleFieldSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RuleFieldSet.swift; sourceTree = "<group>"; };
+		089B8153F5ABD520BF5EC63EBC0F350E /* SectionForm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SectionForm.swift; sourceTree = "<group>"; };
 		0CE4F01750CD216D20227A049CFBED3D /* Pods-Forms_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Forms_Example-frameworks.sh"; sourceTree = "<group>"; };
-		0D33FD84F0771A8C168D0119F91CCA0C /* Pods_Forms_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Forms_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D33FD84F0771A8C168D0119F91CCA0C /* Pods_Forms_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Forms_Example.framework; path = "Pods-Forms_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1118AC80E75894A999EA83D8E0370CB7 /* Pods-Forms_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Forms_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		11AA51A775DB13D15F4A7E5A59BA3527 /* Pods-Forms_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Forms_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		18DCE8CADEF9EDE4993444A69C2DA890 /* SectionFormRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SectionFormRepresentable.swift; sourceTree = "<group>"; };
+		1ED78A14FC987A6FC090D5D17EEB3A3A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		23A118F4BB1D89894CCE662BB9410571 /* DateFormFieldCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DateFormFieldCell.swift; sourceTree = "<group>"; };
 		23CCABCE99A2BF4A3138F48AE5DC2F12 /* Pods-Forms_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Forms_Tests-Info.plist"; sourceTree = "<group>"; };
-		271297E5D1C9C1D58CE94370805FDBC5 /* BaseFormField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseFormField.swift; sourceTree = "<group>"; };
-		2776DCC342B9BE9EFD6224217438A114 /* SectionForm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SectionForm.swift; sourceTree = "<group>"; };
-		285412232624D2CCD9192ABD001A7420 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		297065270F4BADEEF7EA588603F5CAB9 /* CountRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CountRepresentable.swift; sourceTree = "<group>"; };
-		3128658C8234F80BE2F728DAF973504E /* EmptyRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmptyRepresentable.swift; sourceTree = "<group>"; };
-		3885421481D9E8073503275DB93D04C9 /* TextFormFieldCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = TextFormFieldCell.xib; path = Forms/Assets/TextFormFieldCell.xib; sourceTree = "<group>"; };
-		3EA2F30D28C09EA364EBD6B71936EFCA /* DateFormFieldCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DateFormFieldCell.xib; path = Forms/Assets/DateFormFieldCell.xib; sourceTree = "<group>"; };
-		44DAA7C5D90F3E2BDED713D289922C2B /* Forms-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Forms-Info.plist"; sourceTree = "<group>"; };
-		48605EF5496475F3A75BD46EEB39D780 /* Form.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
-		48F7AF9120E56BF07B0A9F4B59F98514 /* LenghFormRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LenghFormRule.swift; sourceTree = "<group>"; };
+		2A95C0EC53F9F8046C2E63B792B8FD36 /* TextFormFieldCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFormFieldCell.swift; sourceTree = "<group>"; };
+		2EDFBA2C3D9888FAB25DE3743EDEC3CA /* FormRuleRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormRuleRepresentable.swift; sourceTree = "<group>"; };
+		2F9322483703FAF960AE63AAC5086E3B /* FormCellRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormCellRepresentable.swift; sourceTree = "<group>"; };
+		3B05E9F182FDABE4B8D5D64F70EEEF03 /* RequiredFormRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RequiredFormRule.swift; sourceTree = "<group>"; };
+		3BE798917BAEBD079DED770D487454BE /* SwitchFormFieldCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwitchFormFieldCell.swift; sourceTree = "<group>"; };
+		3D6C2254791ED26EF858C8D9857FE8AC /* FormFieldCellSelectable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormFieldCellSelectable.swift; sourceTree = "<group>"; };
 		4916FD3A4A999203DF7E75CC611AE8D8 /* Pods-Forms_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Forms_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		547FAFF8F73EE2F7EADC9D0C1EF7A732 /* Pods-Forms_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Forms_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		5C9608AD0B99279EEF40DA85783B2F5B /* TextFormFieldCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFormFieldCell.swift; sourceTree = "<group>"; };
-		64865FBF948F7F6ECB20AA436C0787FA /* Forms.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Forms.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		70CF73E80BE49F19662BB58653A0C43D /* DateFormFieldCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DateFormFieldCell.swift; sourceTree = "<group>"; };
-		750768B744CA6D65B2BE795A243A279D /* Forms-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Forms-prefix.pch"; sourceTree = "<group>"; };
+		54EE490C1B42A2804655BF04AFD0148F /* TextFormField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFormField.swift; sourceTree = "<group>"; };
+		5D50E876B5EB55BC58E3E9F5DE6200C4 /* BaseFormField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseFormField.swift; sourceTree = "<group>"; };
+		648E1A28EE44F433E276977534792259 /* Forms-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Forms-Info.plist"; sourceTree = "<group>"; };
+		683B51C16C97DE6045F9D968FF544FE5 /* Forms.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Forms.xcconfig; sourceTree = "<group>"; };
+		69B02D01ABAEA53156268861C5CF2ADA /* FormRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormRepresentable.swift; sourceTree = "<group>"; };
+		6C919EBAA6951B7748EF2F64667A7176 /* Forms.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Forms.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		702B683CB3D312122461AF5E5834424F /* Form.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		784B74D4B9915E3BC1B0079DD498F8E6 /* Pods-Forms_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Forms_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		8C7B0F0346CAA18F6B91C1131278C977 /* Forms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Forms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EEE01BF65A5E64BDF168B3E106DB16C /* Forms-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Forms-dummy.m"; sourceTree = "<group>"; };
+		7D25F78DCDD9ECC80CA7A66E092CB884 /* SwitchFormFieldCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SwitchFormFieldCell.xib; path = Forms/Assets/SwitchFormFieldCell.xib; sourceTree = "<group>"; };
+		809045C07423C47CA126E0E10AEB7F90 /* Forms.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Forms.modulemap; sourceTree = "<group>"; };
+		84A2E400C2DD74C857AA127007E4CA2A /* DateFormFieldCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DateFormFieldCell.xib; path = Forms/Assets/DateFormFieldCell.xib; sourceTree = "<group>"; };
+		8C7B0F0346CAA18F6B91C1131278C977 /* Forms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Forms.framework; path = Forms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F54A337198D30B337D21F77D0551521 /* Pods-Forms_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Forms_Tests-umbrella.h"; sourceTree = "<group>"; };
-		94BDC5685044775108FF6AA74653C7C0 /* Forms.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Forms.xcconfig; sourceTree = "<group>"; };
-		9B62B440D6B8532EF53941258C0FB1BE /* FormRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormRepresentable.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A46E3F8C8DEE089135331A65478BE2A1 /* SwitchFormFieldCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwitchFormFieldCell.swift; sourceTree = "<group>"; };
-		A4712B98C0D6B2A7D8BBE9DF1D00DDB5 /* Pods_Forms_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Forms_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		952D730CAF4C7457BC3ADE643D960B87 /* DateFormField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DateFormField.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A4712B98C0D6B2A7D8BBE9DF1D00DDB5 /* Pods_Forms_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Forms_Tests.framework; path = "Pods-Forms_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5B1E7602ED8E35B6F190668E69EF29B /* SectionFormRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SectionFormRepresentable.swift; sourceTree = "<group>"; };
 		A85B15576623885072B7F073CD7CBE9A /* Pods-Forms_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Forms_Example-dummy.m"; sourceTree = "<group>"; };
-		B68049CD8D9DCADC0AA1E7BC5C3C5F4C /* Forms.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Forms.modulemap; sourceTree = "<group>"; };
-		B7761D5F91A8F3AB78F2F3CCE88E8844 /* FormFieldRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormFieldRepresentable.swift; sourceTree = "<group>"; };
+		AAD66C5C8115C742B24EC106F04F836A /* CountRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CountRepresentable.swift; sourceTree = "<group>"; };
+		B13C06CE046269D5E82B8B2233188B14 /* BaseFormFieldCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseFormFieldCell.swift; sourceTree = "<group>"; };
+		B17BA373B791AC5B54DDAB3B618F1722 /* TextFormFieldCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = TextFormFieldCell.xib; path = Forms/Assets/TextFormFieldCell.xib; sourceTree = "<group>"; };
+		BD1923B6E3403895BAA93D10671A85EB /* Forms-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Forms-dummy.m"; sourceTree = "<group>"; };
+		C000E2E6EF735B95B5C5825053A99699 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C064F89A9533B8750D76066E102BFB5A /* EmptyRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmptyRepresentable.swift; sourceTree = "<group>"; };
 		C2E2526ABB6AC1B8690B34FF10CD568B /* Pods-Forms_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Forms_Example.release.xcconfig"; sourceTree = "<group>"; };
-		C485AC4BFF2118607FE23AFF4384C537 /* FormRuleRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormRuleRepresentable.swift; sourceTree = "<group>"; };
-		C8C3127CC135FADC0C41804AC5A64AAD /* SwitchFormField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwitchFormField.swift; sourceTree = "<group>"; };
+		C4E570660B9F9BC0F50A240C808423EE /* Forms-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Forms-umbrella.h"; sourceTree = "<group>"; };
+		C78087F981B286D7712FD238E88E20E6 /* SwitchFormField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwitchFormField.swift; sourceTree = "<group>"; };
 		CA70C82FDD667A65448643AA6290B31A /* Pods-Forms_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Forms_Example.modulemap"; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CF17269020D6F7696A2A5E572D6E0854 /* TextFormField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFormField.swift; sourceTree = "<group>"; };
+		CEBB647F0D81EDA7EB6FB7ECB91EF979 /* Forms-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Forms-prefix.pch"; sourceTree = "<group>"; };
 		D0BE6CBA7601AAB1C066491DCE250181 /* Pods-Forms_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Forms_Example-Info.plist"; sourceTree = "<group>"; };
 		D2BF6087BCDCE38E41E1484464C246B5 /* Pods-Forms_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Forms_Tests.modulemap"; sourceTree = "<group>"; };
 		D38C8A2422310544045BAC4141E49D12 /* Pods-Forms_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Forms_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D3CC78CDB15791F5CF53249322DAA3F9 /* Pods-Forms_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Forms_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D45601BCF1ADEC33CBB1461B8B34107D /* BaseFormRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseFormRule.swift; sourceTree = "<group>"; };
 		DD40C02C0424C261C2E625781F2A5E34 /* Pods-Forms_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Forms_Example-umbrella.h"; sourceTree = "<group>"; };
-		E16964DE222FEB6800DCDB90 /* FormFieldCellSelectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldCellSelectable.swift; sourceTree = "<group>"; };
-		E22B210B65636A615615B4749CEC4E91 /* SwitchFormFieldCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SwitchFormFieldCell.xib; path = Forms/Assets/SwitchFormFieldCell.xib; sourceTree = "<group>"; };
-		E4FFA258E34665908134C156A177963B /* Forms-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Forms-umbrella.h"; sourceTree = "<group>"; };
-		EA7CE61EA242A83A35D8BD9114F8456D /* RuleFieldSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RuleFieldSet.swift; sourceTree = "<group>"; };
+		E5801C9C7CDC12815E02A3DCE4E42783 /* FormErrorRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormErrorRepresentable.swift; sourceTree = "<group>"; };
 		EFFADC38715206913EBB0C9628D87B56 /* Pods-Forms_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Forms_Tests-dummy.m"; sourceTree = "<group>"; };
-		F11DB7F83DED7AFCDEA751D94DB2D95A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		F4A48ADE19DEEAF2F6BB64774E68DB20 /* FormErrorRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormErrorRepresentable.swift; sourceTree = "<group>"; };
+		F2B0B727F74FC72804E1F2591C69517E /* BaseFormRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseFormRule.swift; sourceTree = "<group>"; };
+		F4BB8F55A35CF70A2EC4643595374915 /* FormFieldRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormFieldRepresentable.swift; sourceTree = "<group>"; };
+		F918B9D0C1C90E48D7C2DE1C8E170E8B /* LenghFormRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LenghFormRule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		16B05597084D582995315C86F1510D36 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F27F403877A858C4706F6CA03D8D858F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7DC4A315BE5D627B46EBC0D9A546D6AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,17 +138,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB6BF52D82EF7884EA298A4FB9081BFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DFDA39027354F29FD1D07686E8971D4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E3A35DC23E9406D9537C877064FACD0 /* Resources */ = {
+		06D00C5A03D3114E9EB9B7A9C02172FE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				3EA2F30D28C09EA364EBD6B71936EFCA /* DateFormFieldCell.xib */,
-				E22B210B65636A615615B4749CEC4E91 /* SwitchFormFieldCell.xib */,
-				3885421481D9E8073503275DB93D04C9 /* TextFormFieldCell.xib */,
+				AAD66C5C8115C742B24EC106F04F836A /* CountRepresentable.swift */,
+				C064F89A9533B8750D76066E102BFB5A /* EmptyRepresentable.swift */,
+				E5801C9C7CDC12815E02A3DCE4E42783 /* FormErrorRepresentable.swift */,
 			);
-			name = Resources;
+			name = Utils;
+			path = Forms/Classes/Utils;
+			sourceTree = "<group>";
+		};
+		11BE07E00BCD368311984C1BFA5D4328 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				089B8153F5ABD520BF5EC63EBC0F350E /* SectionForm.swift */,
+				A5B1E7602ED8E35B6F190668E69EF29B /* SectionFormRepresentable.swift */,
+			);
+			name = Sections;
+			path = Forms/Classes/Sections;
+			sourceTree = "<group>";
+		};
+		24E8B070F44AD1D11A963ED74343F67F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B13C06CE046269D5E82B8B2233188B14 /* BaseFormFieldCell.swift */,
+				23A118F4BB1D89894CCE662BB9410571 /* DateFormFieldCell.swift */,
+				2F9322483703FAF960AE63AAC5086E3B /* FormCellRepresentable.swift */,
+				3D6C2254791ED26EF858C8D9857FE8AC /* FormFieldCellSelectable.swift */,
+				3BE798917BAEBD079DED770D487454BE /* SwitchFormFieldCell.swift */,
+				2A95C0EC53F9F8046C2E63B792B8FD36 /* TextFormFieldCell.swift */,
+			);
+			name = Cells;
+			path = Forms/Classes/Cells;
 			sourceTree = "<group>";
 		};
 		259BA823354A05598CBAA572BC4AC24A /* Products */ = {
@@ -172,29 +197,76 @@
 		3AC4D6631D0375B32B4275F68C012C8B /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BBE638A7811817EDA75B14A3DE7D732A /* Forms */,
+				845EC3543021F8B88EE50B067BB57030 /* Forms */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		5EB1737921B684A09A1FA14A37B07F9E /* Sections */ = {
+		521CAD329C02644E2690C4983672710E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2776DCC342B9BE9EFD6224217438A114 /* SectionForm.swift */,
-				18DCE8CADEF9EDE4993444A69C2DA890 /* SectionFormRepresentable.swift */,
+				84A2E400C2DD74C857AA127007E4CA2A /* DateFormFieldCell.xib */,
+				7D25F78DCDD9ECC80CA7A66E092CB884 /* SwitchFormFieldCell.xib */,
+				B17BA373B791AC5B54DDAB3B618F1722 /* TextFormFieldCell.xib */,
 			);
-			name = Sections;
-			path = Forms/Classes/Sections;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		6B47AD7D6239638A46DB7E131DE03FE6 /* Pod */ = {
+		5A71D4334F517AA2FDC5011E99AB8D47 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				64865FBF948F7F6ECB20AA436C0787FA /* Forms.podspec */,
-				F11DB7F83DED7AFCDEA751D94DB2D95A /* LICENSE */,
-				285412232624D2CCD9192ABD001A7420 /* README.md */,
+				809045C07423C47CA126E0E10AEB7F90 /* Forms.modulemap */,
+				683B51C16C97DE6045F9D968FF544FE5 /* Forms.xcconfig */,
+				BD1923B6E3403895BAA93D10671A85EB /* Forms-dummy.m */,
+				648E1A28EE44F433E276977534792259 /* Forms-Info.plist */,
+				CEBB647F0D81EDA7EB6FB7ECB91EF979 /* Forms-prefix.pch */,
+				C4E570660B9F9BC0F50A240C808423EE /* Forms-umbrella.h */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Forms";
+			sourceTree = "<group>";
+		};
+		712899E089CD7D7DA892669D9FDE2506 /* Fields */ = {
+			isa = PBXGroup;
+			children = (
+				5D50E876B5EB55BC58E3E9F5DE6200C4 /* BaseFormField.swift */,
+				952D730CAF4C7457BC3ADE643D960B87 /* DateFormField.swift */,
+				F4BB8F55A35CF70A2EC4643595374915 /* FormFieldRepresentable.swift */,
+				C78087F981B286D7712FD238E88E20E6 /* SwitchFormField.swift */,
+				54EE490C1B42A2804655BF04AFD0148F /* TextFormField.swift */,
+			);
+			name = Fields;
+			path = Forms/Classes/Fields;
+			sourceTree = "<group>";
+		};
+		845EC3543021F8B88EE50B067BB57030 /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				24E8B070F44AD1D11A963ED74343F67F /* Cells */,
+				712899E089CD7D7DA892669D9FDE2506 /* Fields */,
+				B19FA19AD6489700285FFA5DAB20E45E /* Form */,
+				B20DEB2C3BE030E32D52808D12D3388C /* Pod */,
+				521CAD329C02644E2690C4983672710E /* Resources */,
+				8817B0554CED3865981AB5EDDD070C09 /* Rules */,
+				11BE07E00BCD368311984C1BFA5D4328 /* Sections */,
+				5A71D4334F517AA2FDC5011E99AB8D47 /* Support Files */,
+				06D00C5A03D3114E9EB9B7A9C02172FE /* Utils */,
+			);
+			name = Forms;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		8817B0554CED3865981AB5EDDD070C09 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				F2B0B727F74FC72804E1F2591C69517E /* BaseFormRule.swift */,
+				2EDFBA2C3D9888FAB25DE3743EDEC3CA /* FormRuleRepresentable.swift */,
+				F918B9D0C1C90E48D7C2DE1C8E170E8B /* LenghFormRule.swift */,
+				3B05E9F182FDABE4B8D5D64F70EEEF03 /* RequiredFormRule.swift */,
+				069C14AD7030C7C8549A4D2D45951D17 /* RuleFieldSet.swift */,
+			);
+			name = Rules;
+			path = Forms/Classes/Rules;
 			sourceTree = "<group>";
 		};
 		97EFFB66685554AFC94DBB96B90576D1 /* Targets Support Files */ = {
@@ -214,61 +286,24 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		A66827E55556376101B9C530538587A9 /* Fields */ = {
+		B19FA19AD6489700285FFA5DAB20E45E /* Form */ = {
 			isa = PBXGroup;
 			children = (
-				271297E5D1C9C1D58CE94370805FDBC5 /* BaseFormField.swift */,
-				B7761D5F91A8F3AB78F2F3CCE88E8844 /* FormFieldRepresentable.swift */,
-				067A87D54EC06225A5D4F33C5FE1B868 /* DateFormField.swift */,
-				C8C3127CC135FADC0C41804AC5A64AAD /* SwitchFormField.swift */,
-				CF17269020D6F7696A2A5E572D6E0854 /* TextFormField.swift */,
+				702B683CB3D312122461AF5E5834424F /* Form.swift */,
+				69B02D01ABAEA53156268861C5CF2ADA /* FormRepresentable.swift */,
 			);
-			name = Fields;
-			path = Forms/Classes/Fields;
+			name = Form;
+			path = Forms/Classes/Form;
 			sourceTree = "<group>";
 		};
-		B3C968D47743EE15049E4EF0CE867714 /* Rules */ = {
+		B20DEB2C3BE030E32D52808D12D3388C /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				D45601BCF1ADEC33CBB1461B8B34107D /* BaseFormRule.swift */,
-				C485AC4BFF2118607FE23AFF4384C537 /* FormRuleRepresentable.swift */,
-				48F7AF9120E56BF07B0A9F4B59F98514 /* LenghFormRule.swift */,
-				0105D084D0AE4A3E7A018E193E762A98 /* RequiredFormRule.swift */,
-				EA7CE61EA242A83A35D8BD9114F8456D /* RuleFieldSet.swift */,
+				6C919EBAA6951B7748EF2F64667A7176 /* Forms.podspec */,
+				C000E2E6EF735B95B5C5825053A99699 /* LICENSE */,
+				1ED78A14FC987A6FC090D5D17EEB3A3A /* README.md */,
 			);
-			name = Rules;
-			path = Forms/Classes/Rules;
-			sourceTree = "<group>";
-		};
-		B780C996EE137246FF590C3E0A9241D6 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				0CD951D5409783ECF565E1A068C329B5 /* FormCellRepresentable.swift */,
-				E16964DE222FEB6800DCDB90 /* FormFieldCellSelectable.swift */,
-				09319D25A265A0F3574B97E4C02E7D76 /* BaseFormFieldCell.swift */,
-				70CF73E80BE49F19662BB58653A0C43D /* DateFormFieldCell.swift */,
-				A46E3F8C8DEE089135331A65478BE2A1 /* SwitchFormFieldCell.swift */,
-				5C9608AD0B99279EEF40DA85783B2F5B /* TextFormFieldCell.swift */,
-			);
-			name = Cells;
-			path = Forms/Classes/Cells;
-			sourceTree = "<group>";
-		};
-		BBE638A7811817EDA75B14A3DE7D732A /* Forms */ = {
-			isa = PBXGroup;
-			children = (
-				B780C996EE137246FF590C3E0A9241D6 /* Cells */,
-				A66827E55556376101B9C530538587A9 /* Fields */,
-				C4B5E0FF81781D9F2E22C5C27F7F22CF /* Form */,
-				6B47AD7D6239638A46DB7E131DE03FE6 /* Pod */,
-				1E3A35DC23E9406D9537C877064FACD0 /* Resources */,
-				B3C968D47743EE15049E4EF0CE867714 /* Rules */,
-				5EB1737921B684A09A1FA14A37B07F9E /* Sections */,
-				EE3ED820F59E0674ECDA8C9139FC2114 /* Support Files */,
-				E3D399B0E317FF4C6E3D2654F3A67ED1 /* Utils */,
-			);
-			name = Forms;
-			path = ../..;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		C3DA3A79DB04E49A19DA4B57556BAA73 /* Pods-Forms_Example */ = {
@@ -286,16 +321,6 @@
 			);
 			name = "Pods-Forms_Example";
 			path = "Target Support Files/Pods-Forms_Example";
-			sourceTree = "<group>";
-		};
-		C4B5E0FF81781D9F2E22C5C27F7F22CF /* Form */ = {
-			isa = PBXGroup;
-			children = (
-				48605EF5496475F3A75BD46EEB39D780 /* Form.swift */,
-				9B62B440D6B8532EF53941258C0FB1BE /* FormRepresentable.swift */,
-			);
-			name = Form;
-			path = Forms/Classes/Form;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -333,31 +358,6 @@
 			path = "Target Support Files/Pods-Forms_Tests";
 			sourceTree = "<group>";
 		};
-		E3D399B0E317FF4C6E3D2654F3A67ED1 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				297065270F4BADEEF7EA588603F5CAB9 /* CountRepresentable.swift */,
-				3128658C8234F80BE2F728DAF973504E /* EmptyRepresentable.swift */,
-				F4A48ADE19DEEAF2F6BB64774E68DB20 /* FormErrorRepresentable.swift */,
-			);
-			name = Utils;
-			path = Forms/Classes/Utils;
-			sourceTree = "<group>";
-		};
-		EE3ED820F59E0674ECDA8C9139FC2114 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B68049CD8D9DCADC0AA1E7BC5C3C5F4C /* Forms.modulemap */,
-				94BDC5685044775108FF6AA74653C7C0 /* Forms.xcconfig */,
-				8EEE01BF65A5E64BDF168B3E106DB16C /* Forms-dummy.m */,
-				44DAA7C5D90F3E2BDED713D289922C2B /* Forms-Info.plist */,
-				750768B744CA6D65B2BE795A243A279D /* Forms-prefix.pch */,
-				E4FFA258E34665908134C156A177963B /* Forms-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Forms";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -369,11 +369,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		942E30604E9796B2C7EA17F8A53705CD /* Headers */ = {
+		7338B74F08FAE77B9B4D2E7F8693572C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80F2DE04BC9751CC9EBD07F2A442FF97 /* Forms-umbrella.h in Headers */,
+				90A2B3034FDF4C463BA04F6AAE313164 /* Forms-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,14 +407,14 @@
 			productReference = 0D33FD84F0771A8C168D0119F91CCA0C /* Pods_Forms_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		633A6FA7BB3231E8F05F7D0DA7217B9F /* Forms */ = {
+		845AD2997BC2BBAAED418C0F5392E736 /* Forms */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 98C12D7B6E9045A1C4C592E87D0F7158 /* Build configuration list for PBXNativeTarget "Forms" */;
+			buildConfigurationList = 12FBE9426F6A5646A128286399913455 /* Build configuration list for PBXNativeTarget "Forms" */;
 			buildPhases = (
-				942E30604E9796B2C7EA17F8A53705CD /* Headers */,
-				0A102843F5C4ACA2DDC0254C154C26F4 /* Sources */,
-				16B05597084D582995315C86F1510D36 /* Frameworks */,
-				58BDC5A9EA68C5C89706C3CDEE8F6CEF /* Resources */,
+				7338B74F08FAE77B9B4D2E7F8693572C /* Headers */,
+				EC05AEB037E728F99400A4536B66FC4E /* Sources */,
+				EB6BF52D82EF7884EA298A4FB9081BFD /* Frameworks */,
+				899F6A42F342D32E556D1EC485131959 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -465,7 +465,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				633A6FA7BB3231E8F05F7D0DA7217B9F /* Forms */,
+				845AD2997BC2BBAAED418C0F5392E736 /* Forms */,
 				2501CD0D1060D04981F2EE23F684C780 /* Pods-Forms_Example */,
 				BF57171E19C83230B57931A2635B1394 /* Pods-Forms_Tests */,
 			);
@@ -487,55 +487,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		58BDC5A9EA68C5C89706C3CDEE8F6CEF /* Resources */ = {
+		899F6A42F342D32E556D1EC485131959 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D28082E4F03CC5D975C18DF67AE43B29 /* DateFormFieldCell.xib in Resources */,
-				E38295B06086CA3099A433AF5D18AF17 /* SwitchFormFieldCell.xib in Resources */,
-				3E58A889D891020B84EE2957279819E3 /* TextFormFieldCell.xib in Resources */,
+				AF95D5E200777B55788183AAAFE68D7C /* DateFormFieldCell.xib in Resources */,
+				7341A464E5BB0B7B8F9626EEF1720B93 /* SwitchFormFieldCell.xib in Resources */,
+				3546AC6AFD60B8E60C4C720A1FD88FE1 /* TextFormFieldCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0A102843F5C4ACA2DDC0254C154C26F4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E940F58D1F0C965FB155AF0E08B1FDD /* BaseFormField.swift in Sources */,
-				9A50E9CD452A10177177CEB2760C6486 /* BaseFormFieldCell.swift in Sources */,
-				48F1CDE631C919DFEE9B81EEFA4F698A /* BaseFormRule.swift in Sources */,
-				DED48D4902DFE62B8C03E47D6729FD42 /* CountRepresentable.swift in Sources */,
-				E16964DF222FEB6800DCDB90 /* FormFieldCellSelectable.swift in Sources */,
-				F56F2D5F398CDA1050BC1F99D4B73385 /* DateFormField.swift in Sources */,
-				B6C8FC0CE75FCF7009CD6323F2ED3906 /* DateFormFieldCell.swift in Sources */,
-				034DD9D3F5A66851D5B88AE4CAA0FC2D /* EmptyRepresentable.swift in Sources */,
-				FF767265F09436F6807A47C99C2310C8 /* Form.swift in Sources */,
-				81AB031BDBB11517DE807CBC58F40717 /* FormCellRepresentable.swift in Sources */,
-				92CE8B25168F41CFA7FE494F14104B7E /* FormErrorRepresentable.swift in Sources */,
-				37EA8B6BFB7B78056EEA3D3A7B35A343 /* FormFieldRepresentable.swift in Sources */,
-				7A2D4120900BFF751722352DDF4BFD9A /* FormRepresentable.swift in Sources */,
-				06D45F2D83371C1FCA0FC0F4DA1262CA /* FormRuleRepresentable.swift in Sources */,
-				2814E70A0E4CAA1BC27B05FAE35F1758 /* Forms-dummy.m in Sources */,
-				29C798DC016DF75669E34796E23C0802 /* LenghFormRule.swift in Sources */,
-				D7AB619F1C4E6EEE8B700035C44C57C9 /* RequiredFormRule.swift in Sources */,
-				CB83D3545B1942D42D2317271E10E80E /* RuleFieldSet.swift in Sources */,
-				788D80F655D7EBE26FA7F052F20D6684 /* SectionForm.swift in Sources */,
-				B9A0D411CED9E0AAB4926CA2BCFE4591 /* SectionFormRepresentable.swift in Sources */,
-				1343ADA8A9A860E315DF64868845D8C3 /* SwitchFormField.swift in Sources */,
-				D0A472F10CF5E80C5AB7351C3EBC0316 /* SwitchFormFieldCell.swift in Sources */,
-				ABA62B9505040C4CBEC35FE55D0E8CF7 /* TextFormField.swift in Sources */,
-				C3A28665D278E77480AC0D177ED0D5C1 /* TextFormFieldCell.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7BA0CD0A9D355E4F84C9D9A94B039B16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9DE3F0850BAC6AD449C2D90356E26153 /* Pods-Forms_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC05AEB037E728F99400A4536B66FC4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A6C927405D9DB6EBD4E35210F3EA853 /* BaseFormField.swift in Sources */,
+				EF14D7D4FFD4387C307F9F239E9967D1 /* BaseFormFieldCell.swift in Sources */,
+				286842E25B2C2ABE64F484C2ABE6050E /* BaseFormRule.swift in Sources */,
+				55DF40AED443BC50CB7B143CFA02182D /* CountRepresentable.swift in Sources */,
+				BC1E0DB3A657107C7C680C0956EF7FFD /* DateFormField.swift in Sources */,
+				A8454C291E38063F1DAE1AF0570B99DB /* DateFormFieldCell.swift in Sources */,
+				F00F6AEA20320336D93097654A2EAA8A /* EmptyRepresentable.swift in Sources */,
+				CE28AE718C991646F72BE71BDB49C541 /* Form.swift in Sources */,
+				EB70C16EE1D3616D7D0B0F9E5E4E7D74 /* FormCellRepresentable.swift in Sources */,
+				B7A61889804141D333E901ED91080D78 /* FormErrorRepresentable.swift in Sources */,
+				C122021A6CA0312467C84929BA5053C9 /* FormFieldCellSelectable.swift in Sources */,
+				719AE0C6391B59C7B990B818112FE510 /* FormFieldRepresentable.swift in Sources */,
+				F4DC9EE2A613977821AFB2E3424185A1 /* FormRepresentable.swift in Sources */,
+				6F9B5EB6193FB1F77F1242F204E6C59E /* FormRuleRepresentable.swift in Sources */,
+				271FD8A07D860B48CAED4E33D6185605 /* Forms-dummy.m in Sources */,
+				5974C6153C2F7A3FAC4E15443599A0B3 /* LenghFormRule.swift in Sources */,
+				54692606F39CA444E78D8B3B96CDF5F2 /* RequiredFormRule.swift in Sources */,
+				6203A7B1F4779869D8FA839B98DC65A0 /* RuleFieldSet.swift in Sources */,
+				1E5BF3E75378C7ECA876B5C3521BC778 /* SectionForm.swift in Sources */,
+				A5DECA3B4D230972C41BC82D2DB3C2D4 /* SectionFormRepresentable.swift in Sources */,
+				D61749F30F257DF5B8374E142AD59B0C /* SwitchFormField.swift in Sources */,
+				34E2C556792314156F8F112A9AB88944 /* SwitchFormFieldCell.swift in Sources */,
+				DC0AE51036DD80FDFC90515203ADFEB4 /* TextFormField.swift in Sources */,
+				64B3D6D8D785729EB119F862D4061876 /* TextFormFieldCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,7 +553,7 @@
 		3FD9F39A36F17B6550169DA210DD5E30 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Forms;
-			target = 633A6FA7BB3231E8F05F7D0DA7217B9F /* Forms */;
+			target = 845AD2997BC2BBAAED418C0F5392E736 /* Forms */;
 			targetProxy = 7C32A77D70A2896EC7694D49FE8F0972 /* PBXContainerItemProxy */;
 		};
 		D40519A6EB8424659E51A5DF2FE6EACA /* PBXTargetDependency */ = {
@@ -618,9 +618,43 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		2B57B8FF02B04727CFEF6F252BEE422B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 683B51C16C97DE6045F9D968FF544FE5 /* Forms.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Forms/Forms-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Forms/Forms-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Forms/Forms.modulemap";
+				PRODUCT_MODULE_NAME = Forms;
+				PRODUCT_NAME = Forms;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -687,39 +721,6 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
-		};
-		32CC0EE88E6DF3C4E38EBFA21614C8DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94BDC5685044775108FF6AA74653C7C0 /* Forms.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Forms/Forms-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Forms/Forms-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Forms/Forms.modulemap";
-				PRODUCT_MODULE_NAME = Forms;
-				PRODUCT_NAME = Forms;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		4449EE5ED8424626462B0EE34A12DA8B /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -824,9 +825,9 @@
 			};
 			name = Debug;
 		};
-		85D2CACD2FA55746C01E86C3F98F239F /* Debug */ = {
+		8EC8B23B3FBE3B021CBBEE59F8EF0479 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94BDC5685044775108FF6AA74653C7C0 /* Forms.xcconfig */;
+			baseConfigurationReference = 683B51C16C97DE6045F9D968FF544FE5 /* Forms.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -894,6 +895,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		12FBE9426F6A5646A128286399913455 /* Build configuration list for PBXNativeTarget "Forms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EC8B23B3FBE3B021CBBEE59F8EF0479 /* Debug */,
+				2B57B8FF02B04727CFEF6F252BEE422B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -908,15 +918,6 @@
 			buildConfigurations = (
 				451C6F5790C0B223696E900B2C764C31 /* Debug */,
 				4449EE5ED8424626462B0EE34A12DA8B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		98C12D7B6E9045A1C4C592E87D0F7158 /* Build configuration list for PBXNativeTarget "Forms" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				85D2CACD2FA55746C01E86C3F98F239F /* Debug */,
-				32CC0EE88E6DF3C4E38EBFA21614C8DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
