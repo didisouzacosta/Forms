@@ -56,7 +56,7 @@
                 <outlet property="labelLabel" destination="97X-fc-dsg" id="vCc-X7-5RA"/>
                 <outlet property="valueSwitch" destination="JcE-PF-R8k" id="gHa-Rm-5lS"/>
             </connections>
-            <point key="canvasLocation" x="-82.400000000000006" y="49.025487256371818"/>
+            <point key="canvasLocation" x="-38" y="-259"/>
         </tableViewCell>
     </objects>
 </document>

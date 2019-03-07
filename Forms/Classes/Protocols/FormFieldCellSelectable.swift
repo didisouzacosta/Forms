@@ -7,7 +7,7 @@
 
 public protocol FormFieldCellSelectable {
     
-    var handler: (() -> Void)? { get }
+    var handler: () -> Void { get }
     
 }
 

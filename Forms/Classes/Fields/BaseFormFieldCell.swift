@@ -9,20 +9,6 @@ import UIKit
 
 public class BaseFormFieldCell<T: FormFieldRepresentable>: UITableViewCell, FormCellRepresentable {
     
-    // MARK: - Public Variables
-    
-    public var identifier: String {
-        return String(describing: type(of: self))
-    }
-    
-    public var nib: UINib {
-        return UINib(nibName: identifier, bundle: Bundle(for: type(of: self)))
-    }
-    
-    public override var reuseIdentifier: String? {
-        return identifier
-    }
-    
     // MARK: - Private Variables
     
     internal var labelOutlet: UILabel? { return nil }

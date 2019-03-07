@@ -7,13 +7,15 @@
 
 import UIKit
 
-public protocol FormFieldRepresentable: RuleFieldSet {
+public protocol FormFieldRepresentable: class, RuleFieldSet {
     
     var identifier: String { get }
     var label: String { get }
     var placeholder: String? { get }
     var isEnabled: Bool { get }
-    var cell: FormCell { get }
+    
+    var cellIdentifier: String { get }
+    var nib: UINib { get }
     
 }
 
@@ -33,6 +35,10 @@ public extension FormFieldRepresentable {
         objc_setAssociatedObject(self, &AssociatedKeys.identifierKey, newUID, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         
         return newUID
+    }
+    
+    public var nib: UINib {
+        return UINib(nibName: cellIdentifier, bundle: Bundle(for: type(of: self)))
     }
     
     public func isEqual<F: FormFieldRepresentable>(_ field: F?) -> Bool {

@@ -5,7 +5,7 @@
 //  Created by Adriano Souza Costa on 01/03/19.
 //
 
-public class BaseFormField<T: Equatable>: FormFieldRepresentable {
+public class BaseFormField<T>: FormFieldRepresentable {
     
     public typealias ValueType = T?
     
@@ -18,7 +18,7 @@ public class BaseFormField<T: Equatable>: FormFieldRepresentable {
     public var placeholder: String?
     public var isEnabled: Bool = true
     
-    public var cell: FormCell {
+    public var cellIdentifier: String {
         fatalError("Override this property 'cell'.")
     }
     

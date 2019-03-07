@@ -35,8 +35,9 @@ class ViewController: UIViewController {
         let fieldD = SwitchFormField(label: "É hipertenso ou cadiáco?")
         let fieldE = SwitchFormField(label: "Tem histórico de diabetes na família?")
         let fieldF = SwitchFormField(value: true, label: "Está acima do peso?")
+        let fieldG = ButtomFormField(text: "Cadastrar") { print("pressionando o botão") }
         
-        let section = SectionForm(fields: fieldA, fieldB, fieldC, fieldD, fieldE, fieldF)
+        let section = SectionForm(fields: fieldA, fieldB, fieldG, fieldC, fieldD, fieldE, fieldF, fieldG, fieldG, fieldG)
         let sectionB = SectionForm(fields: fieldA, fieldA)
         let sectionC = SectionForm(fields: fieldB, fieldB, fieldB, fieldB, fieldB, fieldB)
         let sectionD = SectionForm(fields: fieldA, fieldA, fieldB, fieldB, fieldB, fieldB, fieldB, fieldB)
