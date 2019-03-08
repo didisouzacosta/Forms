@@ -20,13 +20,20 @@ final public class TextFormField: BaseFormField<String> {
 
 public class TextFormFieldCell: BaseFormFieldCell<TextFormField> {
     
-    @IBOutlet private weak var labelLabel: UILabel?
-    @IBOutlet private weak var errorLabel: UILabel?
-    @IBOutlet private weak var valueLabel: UITextField?
+    // MARK: - Public Variables
     
     override var labelOutlet: UILabel? { return labelLabel }
     override var errorOutlet: UILabel? { return errorLabel }
     override var stackOutlet: UIStackView? { return nil }
+    
+    // MARK: - Private Variables
+    // MARK: Outlets
+    
+    @IBOutlet private weak var labelLabel: UILabel?
+    @IBOutlet private weak var errorLabel: UILabel?
+    @IBOutlet private weak var valueLabel: UITextField?
+    
+    // MARK: - Public Methods
     
     public override func setup(with field: TextFormField?) {
         valueLabel?.text = field?.text

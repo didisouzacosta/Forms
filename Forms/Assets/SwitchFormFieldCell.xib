@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ht3-Nk-Ed9">
-                        <rect key="frame" x="16" y="12" width="343" height="51.5"/>
+                        <rect key="frame" x="16" y="11" width="343" height="51.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="R5S-K0-tw8">
                                 <rect key="frame" x="0.0" y="0.0" width="343" height="31"/>
@@ -27,7 +27,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97X-fc-dsg">
                                         <rect key="frame" x="0.0" y="5.5" width="288" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JcE-PF-R8k">
@@ -42,13 +42,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="0wN-t8-ftZ"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="ht3-Nk-Ed9" secondAttribute="trailing" constant="16" id="Osq-p1-PN3"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ht3-Nk-Ed9" secondAttribute="bottom" constant="12" id="Xg9-51-65o"/>
-                    <constraint firstItem="ht3-Nk-Ed9" firstAttribute="leading" secondItem="pYn-nz-Cft" secondAttribute="leading" constant="16" id="khc-fw-70u"/>
-                    <constraint firstItem="ht3-Nk-Ed9" firstAttribute="top" secondItem="pYn-nz-Cft" secondAttribute="top" constant="12" id="xPX-FZ-Gxm"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="ht3-Nk-Ed9" secondAttribute="bottom" id="FmW-BK-7vQ"/>
+                    <constraint firstItem="ht3-Nk-Ed9" firstAttribute="top" secondItem="pYn-nz-Cft" secondAttribute="topMargin" id="Irk-SU-l4G"/>
+                    <constraint firstItem="ht3-Nk-Ed9" firstAttribute="leading" secondItem="pYn-nz-Cft" secondAttribute="leadingMargin" id="RHc-qU-R20"/>
+                    <constraint firstItem="ht3-Nk-Ed9" firstAttribute="trailing" secondItem="pYn-nz-Cft" secondAttribute="trailingMargin" id="V7a-i4-0Ae"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -56,7 +59,7 @@
                 <outlet property="labelLabel" destination="97X-fc-dsg" id="vCc-X7-5RA"/>
                 <outlet property="valueSwitch" destination="JcE-PF-R8k" id="gHa-Rm-5lS"/>
             </connections>
-            <point key="canvasLocation" x="-38" y="-259"/>
+            <point key="canvasLocation" x="-39.200000000000003" y="-259.52023988005999"/>
         </tableViewCell>
     </objects>
 </document>

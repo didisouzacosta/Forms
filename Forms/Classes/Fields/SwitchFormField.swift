@@ -40,7 +40,7 @@ public class SwitchFormFieldCell: BaseFormFieldCell<SwitchFormField>, FormFieldC
     
     private var field: SwitchFormField?
     
-    // MARK: - Outlets
+    // MARK: Outlets
     
     @IBOutlet private weak var labelLabel: UILabel?
     @IBOutlet private weak var errorLabel: UILabel?

@@ -18,38 +18,46 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="121.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="DoK-Ka-pu7">
-                        <rect key="frame" x="16" y="12" width="343" height="81"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DoK-Ka-pu7">
+                        <rect key="frame" x="16" y="11" width="343" height="54.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpw-3E-Hmy">
-                                <rect key="frame" x="0.0" y="0.0" width="343" height="14.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aq7-DY-WcQ">
-                                <rect key="frame" x="0.0" y="20.5" width="343" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="HbY-yP-jfi"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jY2-TR-f7U">
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="900" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpw-3E-Hmy">
+                                        <rect key="frame" x="0.0" y="0.0" width="326" height="40"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aq7-DY-WcQ">
+                                        <rect key="frame" x="334" y="0.0" width="9" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="HbY-yP-jfi"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mF1-xw-vcn">
-                                <rect key="frame" x="0.0" y="66.5" width="343" height="14.5"/>
+                                <rect key="frame" x="0.0" y="40" width="343" height="14.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="l5G-jL-bOr"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="DoK-Ka-pu7" firstAttribute="leading" secondItem="oTh-zJ-e03" secondAttribute="leading" constant="16" id="4o1-8W-CAT"/>
-                    <constraint firstItem="DoK-Ka-pu7" firstAttribute="top" secondItem="oTh-zJ-e03" secondAttribute="top" constant="12" id="WR5-4h-mUv"/>
-                    <constraint firstAttribute="trailing" secondItem="DoK-Ka-pu7" secondAttribute="trailing" constant="16" id="gzp-Fg-DLf"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DoK-Ka-pu7" secondAttribute="bottom" constant="4" id="rhA-VZ-v0A"/>
+                    <constraint firstItem="DoK-Ka-pu7" firstAttribute="top" secondItem="oTh-zJ-e03" secondAttribute="topMargin" id="2Cv-rw-2YN"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="DoK-Ka-pu7" secondAttribute="bottom" id="3hK-q3-BC2"/>
+                    <constraint firstItem="DoK-Ka-pu7" firstAttribute="leading" secondItem="oTh-zJ-e03" secondAttribute="leadingMargin" id="K4P-ea-j1M"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="DoK-Ka-pu7" secondAttribute="trailing" id="tr8-9P-FRE"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
