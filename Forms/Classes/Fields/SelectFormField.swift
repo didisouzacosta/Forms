@@ -10,17 +10,14 @@ import UIKit
 final public class SelectFormField: FormFieldRepresentable, FormFieldCellSelectable {
     
     public var label: String
-    public var value: SelectFieldValue?
+    public var value: SelectFieldValue
     public var isEnabled: Bool = true
     public var acessory: UITableViewCell.AccessoryType
+    public var placeholder: String?
     
     public var handler: () -> Void {
         get { return { [weak self] in self?._handler() } }
         set {}
-    }
-    
-    public var placeholder: String? {
-        return nil
     }
     
     public var rules: [FormRuleRepresentable] = []
@@ -30,14 +27,15 @@ final public class SelectFormField: FormFieldRepresentable, FormFieldCellSelecta
     }
     
     public var cellIdentifier: String {
-        return "SelectFormFieldCell"
+        return SelectFormFieldCell.identifier
     }
     
     private var _handler: () -> Void = {}
     
-    public init<T: SelectFieldValue>(label: String, value: T? = nil, acessory: UITableViewCell.AccessoryType = .disclosureIndicator, handler: @escaping (T?) -> Void) {
-        self.label = label
+    public init<T: SelectFieldValue>( value: T, label: String, placeholder: String? = nil, acessory: UITableViewCell.AccessoryType = .disclosureIndicator, handler: @escaping (T?) -> Void) {
         self.value = value
+        self.label = label
+        self.placeholder = placeholder
         self.acessory = acessory
         
         defer {
@@ -55,10 +53,6 @@ public class SelectFormFieldCell: BaseFormFieldCell<SelectFormField>, FormFieldC
     
     public var handler: () -> Void = {}
     
-    public static var identifier: String {
-        return "SelectFormFieldCell"
-    }
-    
     // MARK: - Private Variables
     // MARK: Outlets
     
@@ -70,9 +64,13 @@ public class SelectFormFieldCell: BaseFormFieldCell<SelectFormField>, FormFieldC
     
     public override func setup(with field: SelectFormField?) {
         self.handler = field?.handler ?? {}
+        
         errorLabel?.isHidden = true
+        
         labelLabel?.text = field?.label
-        valueLabel?.text = field?.value?.valueDescription
+        valueLabel?.text = field?.value.valueIsEmpty ?? false ? field?.placeholder : field?.value.valueDescription
+        valueLabel?.textColor = field?.value.valueIsEmpty ?? false ? .lightGray : .darkGray
+        
         accessoryType = field?.acessory ?? .none
     }
     

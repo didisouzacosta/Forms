@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         let fieldG = ButtomFormField(text: "Cadastrar") { print("pressionando o botão") }
         let fieldH = NumberFormField(label: "Salário", placeholder: "Informe seu salário")
         
-        let fieldJ = SelectFormField(label: "Idade do pai", value: 54) { value in
+        let fieldJ = SelectFormField(value: 0.0, label: "Idade do pai", placeholder: "Informe aqui a idade") { value in
             print(value?.valueDescription ?? "")
         }
         
