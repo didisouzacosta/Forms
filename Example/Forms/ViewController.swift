@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let fieldA = TextFormField(value: "Adriano Souza Costa", label: "Nome completo", placeholder: "Insira seu nome aqui")
+        let fieldA = TextFormField(label: "Nome completo", placeholder: "Insira seu nome aqui")
         fieldA.rules = [
             RequiredFormRule(message: "O campo 'fieldA' é obrigatório"),
             ExactLenghFormRule(exactLenght: 7, message: "O campo deve ter exatamente 7 caracters")
@@ -36,8 +36,17 @@ class ViewController: UIViewController {
         let fieldE = SwitchFormField(label: "Tem histórico de diabetes na família?")
         let fieldF = SwitchFormField(value: true, label: "Está acima do peso?")
         let fieldG = ButtomFormField(text: "Cadastrar") { print("pressionando o botão") }
+        let fieldH = NumberFormField(label: "Salário", placeholder: "Informe seu salário")
         
-        let section = SectionForm(fields: fieldA, fieldB, fieldG, fieldC, fieldD, fieldE, fieldF, fieldG, fieldG, fieldG)
+        let fieldJ = SelectFormField(label: "Idade do pai", value: 54) { value in
+            print(value?.valueDescription ?? "")
+        }
+        
+        let fieldI = ButtomFormField(text: "Selecione uma cor") {
+            fieldJ.value = "sdfsdf"
+        }
+        
+        let section = SectionForm(fields: fieldJ, fieldA, fieldB, fieldG, fieldC, fieldD, fieldE, fieldF, fieldI, fieldH)
         let sectionB = SectionForm(fields: fieldA, fieldA)
         let sectionC = SectionForm(fields: fieldB, fieldB, fieldB, fieldB, fieldB, fieldB)
         let sectionD = SectionForm(fields: fieldA, fieldA, fieldB, fieldB, fieldB, fieldB, fieldB, fieldB)

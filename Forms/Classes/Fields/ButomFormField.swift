@@ -8,23 +8,27 @@
 import UIKit
 
 public enum ButtomFormType {
-    case `default`
+    case normal
     case warning
     case danger
+    case submit
     
     var color: UIColor? {
         switch self {
         case .warning: return .orange
         case .danger: return .red
-        default: return nil
+        case .submit: return .color(red: 5, green: 122, blue: 255)
+        default: return .darkGray
         }
     }
+    
 }
 
 final public class ButtomFormField: FormFieldRepresentable, FormFieldCellSelectable {
     
     public var text: String
     public var type: ButtomFormType
+    public var acessory: UITableViewCell.AccessoryType
     public var isEnabled: Bool = true
     public var handler: () -> Void = {}
     
@@ -49,9 +53,10 @@ final public class ButtomFormField: FormFieldRepresentable, FormFieldCellSelecta
         return ButtomFormFieldCell.identifier
     }
     
-    public init(text: String, type: ButtomFormType = .default, handler: @escaping () -> Void) {
+    public init(text: String, type: ButtomFormType = .submit, acessory: UITableViewCell.AccessoryType = .none, handler: @escaping () -> Void) {
         self.text = text
         self.type = type
+        self.acessory = acessory
         self.handler = handler
     }
     
@@ -66,23 +71,20 @@ public class ButtomFormFieldCell: BaseFormFieldCell<ButtomFormField>, FormFieldC
     // MARK: - Private Variables
     // MARK: Outlets
     
-    @IBOutlet private weak var actionButton: UIButton?
+    @IBOutlet private weak var labelLabel: UILabel?
     
     // MARK: - Public Methods
     
     public override func setup(with field: ButtomFormField?) {
-        self.handler = field?.handler ?? {}
+        guard let field = field else { return }
         
-        actionButton?.titleLabel?.numberOfLines = 0
-        actionButton?.titleLabel?.textAlignment = .center
-        actionButton?.setTitle(field?.text, for: .normal)
-        actionButton?.setTitleColor(field?.type.color, for: .normal)
-    }
-    
-    // MARK: - Private Methods
-    
-    @IBAction private func tap(_ outlet: UIButton) {
-        handler()
+        self.handler = field.handler
+        
+        labelLabel?.textAlignment = field.acessory == .none ? .center : .left
+        labelLabel?.text = field.text
+        labelLabel?.textColor = field.type.color
+        
+        accessoryType = field.acessory
     }
     
 }
