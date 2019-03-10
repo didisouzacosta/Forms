@@ -38,20 +38,19 @@ class ViewController: UIViewController {
         let fieldG = ButtomFormField(text: "Cadastrar") { print("pressionando o botão") }
         let fieldH = NumberFormField(label: "Salário", placeholder: "Informe seu salário")
         
-        let fieldJ = SelectFormField(value: 0.0, label: "Idade do pai", placeholder: "Informe aqui a idade") { value in
+        let fieldJ = SelectFormField(value: "", label: "Nome do pai", placeholder: "Informe aqui o nome do pai") { value in
             print(value?.valueDescription ?? "")
         }
         
         let fieldI = ButtomFormField(text: "Selecione uma cor") {
-            fieldJ.value = "sdfsdf"
+            fieldB.scroll()
         }
         
-        let section = SectionForm(fields: fieldJ, fieldA, fieldB, fieldG, fieldC, fieldD, fieldE, fieldF, fieldI, fieldH)
+        let section = SectionForm(fields: fieldJ, fieldA, fieldG, fieldC, fieldD, fieldE, fieldF, fieldI, fieldH)
         let sectionB = SectionForm(fields: fieldA, fieldA)
-        let sectionC = SectionForm(fields: fieldB, fieldB, fieldB, fieldB, fieldB, fieldB)
-        let sectionD = SectionForm(fields: fieldA, fieldA, fieldB, fieldB, fieldB, fieldB, fieldB, fieldB)
+        let sectionD = SectionForm(fields: fieldB, fieldA, fieldA)
         
-        form.sections.append(contentsOf: [section, sectionB, sectionC, sectionD, section, sectionB, sectionC, sectionD])
+        form.sections.append(contentsOf: [section, section, sectionB, sectionD])
         
         do {
             print(try form.validate())

@@ -37,9 +37,6 @@ public class SwitchFormFieldCell: BaseFormFieldCell<SwitchFormField>, FormFieldC
     }
     
     // MARK: - Private Variables
-    
-    private var field: SwitchFormField?
-    
     // MARK: Outlets
     
     @IBOutlet private weak var labelLabel: UILabel?
@@ -48,9 +45,8 @@ public class SwitchFormFieldCell: BaseFormFieldCell<SwitchFormField>, FormFieldC
     
     // MARK: - Public Methods
     
-    public override func setup(with field: SwitchFormField?) {
-        self.field = field
-        valueSwitch?.isOn = field?.value ?? false
+    public override func setup() {
+        valueSwitch?.setOn(field?.value ?? false, animated: true)
         valueSwitch?.addTarget(self, action: #selector(valueChanged(_:)), for: .valueChanged)
     }
     

@@ -35,7 +35,7 @@ public class TextFormFieldCell: BaseFormFieldCell<TextFormField> {
     
     // MARK: - Public Methods
     
-    public override func setup(with field: TextFormField?) {
+    public override func setup() {
         valueLabel?.text = field?.text
         valueLabel?.placeholder = field?.placeholder
     }

@@ -12,7 +12,7 @@ public protocol FormFieldRepresentable: class, RuleFieldSet {
     var identifier: String { get }
     var label: String { get }
     var placeholder: String? { get }
-    var isEnabled: Bool { get }
+    var isEnabled: Bool { get set }
     
     var cellIdentifier: String { get }
     var nib: UINib { get }
@@ -21,6 +21,8 @@ public protocol FormFieldRepresentable: class, RuleFieldSet {
 
 fileprivate struct AssociatedKeys {
     static var identifierKey = "identifier.key"
+    static var indexPathKey = "indexPath.key"
+    static var tableViewKey = "tableView.key"
 }
 
 public extension FormFieldRepresentable {
@@ -43,6 +45,31 @@ public extension FormFieldRepresentable {
     
     public func isEqual<F: FormFieldRepresentable>(_ field: F?) -> Bool {
         return identifier == field?.identifier
+    }
+    
+    public func reload() {
+        tableView?.beginUpdates()
+        
+        (tableView?.indexPathsForVisibleRows ?? [])
+            .compactMap { tableView?.cellForRow(at: $0) as? FormFieldCell }
+            .forEach { $0.setup() }
+        
+        tableView?.endUpdates()
+    }
+    
+    public func scroll(position: UITableView.ScrollPosition = .middle, animated: Bool = true) {
+        guard let indexPath = indexPath else { return }
+        tableView?.scrollToRow(at: indexPath, at: position, animated: animated)
+    }
+    
+    internal var indexPath: IndexPath? {
+        get { return objc_getAssociatedObject(self, &AssociatedKeys.indexPathKey) as? IndexPath }
+        set { objc_setAssociatedObject(self, &AssociatedKeys.indexPathKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
+    }
+    
+    internal weak var tableView: UITableView? {
+        get { return objc_getAssociatedObject(self, &AssociatedKeys.tableViewKey) as? UITableView }
+        set { objc_setAssociatedObject(self, &AssociatedKeys.tableViewKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
     }
     
 }

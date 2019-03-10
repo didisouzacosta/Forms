@@ -10,10 +10,13 @@ import UIKit
 final public class SelectFormField: FormFieldRepresentable, FormFieldCellSelectable {
     
     public var label: String
-    public var value: SelectFieldValue
     public var isEnabled: Bool = true
     public var acessory: UITableViewCell.AccessoryType
     public var placeholder: String?
+    
+    public var value: SelectFieldValue {
+        didSet { reload() }
+    }
     
     public var handler: () -> Void {
         get { return { [weak self] in self?._handler() } }
@@ -62,14 +65,14 @@ public class SelectFormFieldCell: BaseFormFieldCell<SelectFormField>, FormFieldC
     
     // MARK: - Public Methods
     
-    public override func setup(with field: SelectFormField?) {
+    public override func setup() {
         self.handler = field?.handler ?? {}
         
         errorLabel?.isHidden = true
         
         labelLabel?.text = field?.label
         valueLabel?.text = field?.value.valueIsEmpty ?? false ? field?.placeholder : field?.value.valueDescription
-        valueLabel?.textColor = field?.value.valueIsEmpty ?? false ? .lightGray : .darkGray
+        valueLabel?.textColor = field?.value.valueIsEmpty ?? false ? .lightGray : .black
         
         accessoryType = field?.acessory ?? .none
     }

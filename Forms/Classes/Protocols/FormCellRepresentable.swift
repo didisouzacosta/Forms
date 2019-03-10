@@ -15,7 +15,7 @@ public protocol FormCellRepresentable: class {
     var reuseIdentifier: String? { get }
     
     func setup(with field: FormFieldRepresentable)
-    func updateLayout()
+    func setup()
     
 }
 

@@ -65,7 +65,11 @@ extension Form: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         registerCells()
+        
         let field = sections[indexPath.section].fields[indexPath.row]
+        field.tableView = tableView
+        field.indexPath = indexPath
+        
         return tableView.dequeueReusableCell(with: field, indexPath: indexPath)
     }
     

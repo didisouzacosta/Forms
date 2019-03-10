@@ -32,7 +32,7 @@ public class NumberFormFieldCell: BaseFormFieldCell<NumberFormField> {
     
     // MARK: - Public Methods
     
-    public override func setup(with field: NumberFormField?) {
+    public override func setup() {
         if let value = field?.value {
             valueLabel?.text = String(value)
         }

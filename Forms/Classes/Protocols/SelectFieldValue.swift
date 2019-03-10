@@ -29,6 +29,18 @@ extension Float: SelectFieldValue {
     public var valueDescription: String? { return String(describing: self) }
 }
 
+extension CGPoint: SelectFieldValue {
+    public var valueDescription: String? { return String(describing: self) }
+}
+
+extension Data: SelectFieldValue {
+    public var valueDescription: String? { return String(describing: self) }
+}
+
+extension Date: SelectFieldValue {
+    public var valueDescription: String? { return String(describing: self) }
+}
+
 extension Int: SelectFieldValue {
     public var valueDescription: String? { return String(describing: self) }
 }

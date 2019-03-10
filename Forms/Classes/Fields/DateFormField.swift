@@ -30,8 +30,7 @@ public class DateFormFieldCell: BaseFormFieldCell<DateFormField> {
     override var errorOutlet: UILabel? { return errorLabel }
     override var stackOutlet: UIStackView? { return nil }
     
-    public override func setup(with field: DateFormField?) {
-        
+    public override func setup() {
         guard let date = field?.date else { return }
         
         let formatter = DateFormatter()
