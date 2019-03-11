@@ -29,28 +29,23 @@ class ViewController: UIViewController {
         let fieldB = DateFormField(value: Date(), label: "Nascimento")
         fieldB.rules.append(RequiredFormRule(message: "O campo 'Data' e obrigatório"))
         
-        let fieldC = DateFormField(value: Date(), label: "Nascimento")
-        fieldC.rules.append(RequiredFormRule(message: "O campo 'Birthday' e obrigatório"))
+        let fieldF = SwitchFormField(value: true, label: "Está acima do peso?")
+        let fieldE = SwitchFormField(label: "Tem histórico de diabetes na família?")
         
         let fieldD = SwitchFormField(label: "É hipertenso ou cadiáco?")
-        let fieldE = SwitchFormField(label: "Tem histórico de diabetes na família?")
-        let fieldF = SwitchFormField(value: true, label: "Está acima do peso?")
-        let fieldG = ButtomFormField(text: "Cadastrar") { print("pressionando o botão") }
-        let fieldH = NumberFormField(label: "Salário", placeholder: "Informe seu salário")
-        
-        let fieldJ = SelectFormField(value: "", label: "Nome do pai", placeholder: "Informe aqui o nome do pai") { value in
-            print(value?.valueDescription ?? "")
+        fieldD.valueUpdated() { newValue, _ in
+            let status = newValue ?? false
+            
+            fieldE.isEnabled = status
+            fieldE.value = status
+            
+            fieldF.isEnabled = status
+            fieldF.value = !status
         }
         
-        let fieldI = ButtomFormField(text: "Selecione uma cor") {
-            fieldB.scroll()
-        }
+        let section = SectionForm(fields: fieldA, fieldB, fieldF, fieldE, fieldD)
         
-        let section = SectionForm(fields: fieldJ, fieldA, fieldG, fieldC, fieldD, fieldE, fieldF, fieldI, fieldH)
-        let sectionB = SectionForm(fields: fieldA, fieldA)
-        let sectionD = SectionForm(fields: fieldB, fieldA, fieldA)
-        
-        form.sections.append(contentsOf: [section, section, sectionB, sectionD])
+        form.sections.append(contentsOf: [section])
         
         do {
             print(try form.validate())

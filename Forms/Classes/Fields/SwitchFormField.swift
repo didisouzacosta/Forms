@@ -13,7 +13,7 @@ final public class SwitchFormField: BaseFormField<Bool> {
         return SwitchFormFieldCell.identifier
     }
     
-    public var date: ValueType {
+    public var date: ValueType? {
         get { return value }
         set { value = newValue }
     }
@@ -45,7 +45,9 @@ public class SwitchFormFieldCell: BaseFormFieldCell<SwitchFormField>, FormFieldC
     
     // MARK: - Public Methods
     
-    public override func setup() {
+    public override func setupContent() {
+        super.setupContent()
+        
         valueSwitch?.setOn(field?.value ?? false, animated: true)
         valueSwitch?.addTarget(self, action: #selector(valueChanged(_:)), for: .valueChanged)
     }

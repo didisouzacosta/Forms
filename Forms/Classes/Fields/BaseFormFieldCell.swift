@@ -30,14 +30,13 @@ public class BaseFormFieldCell<T: FormFieldRepresentable>: FormFieldCell {
     
     final public func setup(with field: FormFieldRepresentable) {
         self.field = field as? T
-        
-        setup()
-        
-        labelOutlet?.text = field.label
+        setupContent()
+    }
+    
+    public func setupContent() {
+        labelOutlet?.text = field?.label
         errorOutlet?.isHidden = true
         contentView.alpha = isUserInteractionEnabled ? 1 : 0.4
     }
-    
-    public func setup() {}
     
 }

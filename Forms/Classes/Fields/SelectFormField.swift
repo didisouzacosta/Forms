@@ -33,7 +33,11 @@ final public class SelectFormField: FormFieldRepresentable, FormFieldCellSelecta
         return SelectFormFieldCell.identifier
     }
     
+    // MARK: - Private Variables
+    
     private var _handler: () -> Void = {}
+    
+    // MARK: - Life Cycle
     
     public init<T: SelectFieldValue>( value: T, label: String, placeholder: String? = nil, acessory: UITableViewCell.AccessoryType = .disclosureIndicator, handler: @escaping (T?) -> Void) {
         self.value = value
@@ -65,7 +69,9 @@ public class SelectFormFieldCell: BaseFormFieldCell<SelectFormField>, FormFieldC
     
     // MARK: - Public Methods
     
-    public override func setup() {
+    public override func setupContent() {
+        super.setupContent()
+        
         self.handler = field?.handler ?? {}
         
         errorLabel?.isHidden = true

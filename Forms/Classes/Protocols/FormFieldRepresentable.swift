@@ -12,10 +12,10 @@ public protocol FormFieldRepresentable: class, RuleFieldSet {
     var identifier: String { get }
     var label: String { get }
     var placeholder: String? { get }
-    var isEnabled: Bool { get set }
-    
     var cellIdentifier: String { get }
     var nib: UINib { get }
+    
+    var isEnabled: Bool { get set }
     
 }
 
@@ -52,7 +52,7 @@ public extension FormFieldRepresentable {
         
         (tableView?.indexPathsForVisibleRows ?? [])
             .compactMap { tableView?.cellForRow(at: $0) as? FormFieldCell }
-            .forEach { $0.setup() }
+            .forEach { $0.setupContent() }
         
         tableView?.endUpdates()
     }

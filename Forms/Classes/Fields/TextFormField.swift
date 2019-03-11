@@ -11,7 +11,7 @@ final public class TextFormField: BaseFormField<String> {
         return TextFormFieldCell.identifier
     }
     
-    public var text: ValueType {
+    public var text: ValueType? {
         get { return value }
         set { value = newValue }
     }
@@ -35,7 +35,9 @@ public class TextFormFieldCell: BaseFormFieldCell<TextFormField> {
     
     // MARK: - Public Methods
     
-    public override func setup() {
+    public override func setupContent() {
+        super.setupContent()
+        
         valueLabel?.text = field?.text
         valueLabel?.placeholder = field?.placeholder
     }

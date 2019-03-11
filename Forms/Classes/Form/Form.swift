@@ -43,6 +43,14 @@ public class Form: NSObject, FormRepresentable {
     
 }
 
+extension Form {
+    
+    func indexPath(at field: FormFieldRepresentable) -> IndexPath? {
+        return nil
+    }
+    
+}
+
 extension Form: UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -68,7 +76,6 @@ extension Form: UITableViewDataSource {
         
         let field = sections[indexPath.section].fields[indexPath.row]
         field.tableView = tableView
-        field.indexPath = indexPath
         
         return tableView.dequeueReusableCell(with: field, indexPath: indexPath)
     }

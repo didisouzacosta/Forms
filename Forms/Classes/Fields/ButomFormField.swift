@@ -75,8 +75,8 @@ public class ButtomFormFieldCell: BaseFormFieldCell<ButtomFormField>, FormFieldC
     
     // MARK: - Public Methods
     
-    public override func setup() {
-        super.setup()
+    public override func setupContent() {
+        super.setupContent()
         
         guard let field = field else { return }
         

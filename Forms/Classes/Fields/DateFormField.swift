@@ -13,7 +13,7 @@ final public class DateFormField: BaseFormField<Date> {
         return DateFormFieldCell.identifier
     }
     
-    public var date: ValueType {
+    public var date: ValueType? {
         get { return value }
         set { value = newValue }
     }
@@ -30,7 +30,9 @@ public class DateFormFieldCell: BaseFormFieldCell<DateFormField> {
     override var errorOutlet: UILabel? { return errorLabel }
     override var stackOutlet: UIStackView? { return nil }
     
-    public override func setup() {
+    public override func setupContent() {
+        super.setupContent()
+        
         guard let date = field?.date else { return }
         
         let formatter = DateFormatter()
