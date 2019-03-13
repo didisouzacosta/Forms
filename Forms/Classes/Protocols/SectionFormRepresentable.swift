@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol FormSectionRepresentable {
+public protocol FormSectionRepresentable: FormIdentifiable {
     
     var fields: [FormFieldRepresentable] { get set }
 

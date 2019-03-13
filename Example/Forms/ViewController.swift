@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         
         let lastSection = SectionForm(fields: buttomField)
         
-        form.sections.append(contentsOf: [firstSection, lastSection])
+        form.add(sections: [firstSection, lastSection])
         
     }
     

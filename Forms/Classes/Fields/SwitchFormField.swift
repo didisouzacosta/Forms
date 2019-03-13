@@ -48,7 +48,7 @@ public class SwitchFormFieldCell: BaseFormFieldCell<SwitchFormField>, FormFieldC
     public override func setupContent() {
         super.setupContent()
         
-        valueSwitch?.setOn(field?.value ?? false, animated: true)
+        valueSwitch?.setOn(field?.value ?? false, animated: false)
         valueSwitch?.addTarget(self, action: #selector(valueChanged(_:)), for: .valueChanged)
     }
     

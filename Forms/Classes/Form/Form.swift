@@ -13,27 +13,15 @@ public class Form: NSObject, FormRepresentable {
     
     public weak var tableView: UITableView?
     
-    public var sections: [FormSectionRepresentable] {
-        didSet {
-            sections.flatMap { $0.fields }.forEach { field in
-                field.form = self
-                field.tableView = tableView
-            }
-        }
-    }
-    
     // MARK: - Private Variables
     
     private var isRegisteredCells: Bool = false
     
     // MARK: - Life Cycle
     
-    public init(tableView: UITableView, sections: FormSectionRepresentable...) {
+    public init(tableView: UITableView) {
         self.tableView = tableView
-        self.sections = sections
-        
         super.init()
-        
         setupTableView()
     }
     
