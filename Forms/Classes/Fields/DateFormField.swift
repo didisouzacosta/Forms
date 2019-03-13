@@ -33,12 +33,13 @@ public class DateFormFieldCell: BaseFormFieldCell<DateFormField> {
     public override func setupContent() {
         super.setupContent()
         
-        guard let date = field?.date else { return }
-        
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        
-        valueLabel?.text = formatter.string(from: date)
+        if let date = field?.date {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .medium
+            valueLabel?.text = formatter.string(from: date)
+        } else {
+            valueLabel?.text = field?.placeholder
+        }
     }
     
 }

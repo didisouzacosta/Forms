@@ -34,7 +34,13 @@
                             <constraint firstItem="xfM-bU-VHb" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="nu7-OT-myd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6Go-F5-OWq"/>
+                    <navigationItem key="navigationItem" id="6Go-F5-OWq">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="vfD-We-BXX">
+                            <connections>
+                                <action selector="scroll" destination="vXZ-lx-hvc" id="Z68-CN-7PQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="xfM-bU-VHb" id="TaQ-O4-Uj7"/>
                     </connections>

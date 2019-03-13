@@ -8,16 +8,13 @@
 public class BaseFormField<T: Equatable>: FormFieldRepresentable {
     
     public typealias ValueType = T
-    public typealias UpdatedHandler = (_ newValue: ValueType?, _ oldValue: ValueType?) -> Void
+    public typealias UpdatedValueHandler = (_ newValue: ValueType?, _ oldValue: ValueType?) -> Void
     
     // MARK: - Public Variables
     
     public var rules: [FormRuleRepresentable] = []
     public var placeholder: String?
-    
-    public var label: String {
-        didSet { reload() }
-    }
+    public var label: String
     
     public var isEnabled: Bool = true {
         didSet { reload() }
@@ -27,7 +24,7 @@ public class BaseFormField<T: Equatable>: FormFieldRepresentable {
         didSet {
             guard oldValue != value else { return }
             self.oldValue = oldValue
-            fireValueUpdatedHandlers(newValue: value, oldValue: oldValue)
+            valueUpdatedHandlers.forEach { $0(value, oldValue) }
             reload()
         }
     }
@@ -39,7 +36,7 @@ public class BaseFormField<T: Equatable>: FormFieldRepresentable {
     // MARK: - Private Variables
     
     private var oldValue: ValueType?
-    private var valueUpdatedHandlers: [UpdatedHandler] = []
+    private var valueUpdatedHandlers: [UpdatedValueHandler] = []
     
     // MARK: - Life Cycle
     
@@ -51,28 +48,18 @@ public class BaseFormField<T: Equatable>: FormFieldRepresentable {
     
     // MARK: - Public Methods
     
-    public func valueUpdated(fire: Bool = true, handler: @escaping UpdatedHandler) {
+    public func valueUpdated(fire: Bool = true, handler: @escaping UpdatedValueHandler) {
         valueUpdatedHandlers.append(handler)
         
         if fire {
-            self.fireValueUpdatedHandlers(newValue: value, oldValue: oldValue)
+            handler(value, oldValue)
         }
-    }
-    
-    public func clearValueUpdatedHandlers() {
-        valueUpdatedHandlers.removeAll()
     }
     
     public func validate() throws -> Bool {
         return try rules.reduce(true) { (result, rule) -> Bool in
             return try rule.validate(value) == result
         }
-    }
-    
-    // MARK: - Private Methods
-    
-    private func fireValueUpdatedHandlers(newValue: ValueType?, oldValue: ValueType?) {
-        valueUpdatedHandlers.forEach { $0(newValue, oldValue) }
     }
     
 }

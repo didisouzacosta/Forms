@@ -36,7 +36,11 @@ public class BaseFormFieldCell<T: FormFieldRepresentable>: FormFieldCell {
     public func setupContent() {
         labelOutlet?.text = field?.label
         errorOutlet?.isHidden = true
-        contentView.alpha = isUserInteractionEnabled ? 1 : 0.4
+        
+        UIView.animate(withDuration: 0.26) { [weak self] in
+            guard let self = self else { return }
+            self.contentView.alpha = self.isUserInteractionEnabled ? 1 : 0.4
+        }
     }
     
 }

@@ -20,39 +20,51 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let fieldA = TextFormField(label: "Nome completo", placeholder: "Insira seu nome aqui")
-        fieldA.rules = [
-            RequiredFormRule(message: "O campo 'fieldA' é obrigatório"),
+        let nameField = TextFormField(label: "Nome completo", placeholder: "Insira seu nome aqui")
+        nameField.rules = [
+            RequiredFormRule(message: "O campo 'Nome' é obrigatório."),
             ExactLenghFormRule(exactLenght: 7, message: "O campo deve ter exatamente 7 caracters")
         ]
         
-        let fieldB = DateFormField(value: Date(), label: "Nascimento")
-        fieldB.rules.append(RequiredFormRule(message: "O campo 'Data' e obrigatório"))
+        let emailField = TextFormField(label: "Email", placeholder: "Ex: email@email.com.br")
+        emailField.rules = [
+            RequiredFormRule(message: "O campo 'Email' é obrigatório.")
+        ]
         
-        let fieldF = SwitchFormField(value: true, label: "Está acima do peso?")
-        let fieldE = SwitchFormField(label: "Tem histórico de diabetes na família?")
+        let birthdayField = DateFormField(label: "Nascimento", placeholder: "Informe sua data de nascimento")
+        birthdayField.rules = [
+            RequiredFormRule(message: "O campo 'Aniversário' e obrigatório.")
+        ]
         
-        let fieldD = SwitchFormField(label: "É hipertenso ou cadiáco?")
-        fieldD.valueUpdated() { newValue, _ in
-            let status = newValue ?? false
-            
-            fieldE.isEnabled = status
-            fieldE.value = status
-            
-            fieldF.isEnabled = status
-            fieldF.value = !status
+        let buttomField = ButtomFormField(text: "Cadastrar", type: .submit) { [weak self] in
+            do {
+                try self?.form.validate()
+            } catch {
+                self?.show(error: error)
+            }
         }
         
-        let section = SectionForm(fields: fieldA, fieldB, fieldF, fieldE, fieldD)
-        
-        form.sections.append(contentsOf: [section])
-        
-        do {
-            print(try form.validate())
-        } catch {
-            print(error)
+        let fields = (1...9000).map { index in
+            return SwitchFormField(label: "Label \(index)")
         }
         
+        let firstSection = SectionForm()
+        firstSection.fields.append(contentsOf: fields)
+        
+        let lastSection = SectionForm(fields: buttomField)
+        
+        form.sections.append(contentsOf: [firstSection, lastSection])
+        
+    }
+    
+    private func show(error: Error) {
+        let alert = UIAlertController(title: "Erro", message: error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(alert, animated: true)
+    }
+    
+    @IBAction private func scroll() {
+        form.sections.last?.fields.last?.scroll()
     }
 
 }

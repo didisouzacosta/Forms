@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol FormFieldRepresentable: class, RuleFieldSet {
+public protocol FormFieldRepresentable: class, RuleFieldSet, Validatable {
     
     var identifier: String { get }
     var label: String { get }
@@ -17,11 +17,14 @@ public protocol FormFieldRepresentable: class, RuleFieldSet {
     
     var isEnabled: Bool { get set }
     
+    func reload()
+    func scroll()
+    
 }
 
 fileprivate struct AssociatedKeys {
     static var identifierKey = "identifier.key"
-    static var indexPathKey = "indexPath.key"
+    static var formKey = "form.key"
     static var tableViewKey = "tableView.key"
 }
 
@@ -57,14 +60,13 @@ public extension FormFieldRepresentable {
         tableView?.endUpdates()
     }
     
-    public func scroll(position: UITableView.ScrollPosition = .middle, animated: Bool = true) {
-        guard let indexPath = indexPath else { return }
-        tableView?.scrollToRow(at: indexPath, at: position, animated: animated)
+    public func scroll() {
+        form?.scroll(to: self)
     }
     
-    internal var indexPath: IndexPath? {
-        get { return objc_getAssociatedObject(self, &AssociatedKeys.indexPathKey) as? IndexPath }
-        set { objc_setAssociatedObject(self, &AssociatedKeys.indexPathKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
+    internal var form: FormRepresentable? {
+        get { return objc_getAssociatedObject(self, &AssociatedKeys.formKey) as? FormRepresentable }
+        set { objc_setAssociatedObject(self, &AssociatedKeys.formKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
     }
     
     internal weak var tableView: UITableView? {

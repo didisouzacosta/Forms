@@ -9,12 +9,25 @@ import UIKit
 
 public class Form: NSObject, FormRepresentable {
     
-    public var sections: [FormSectionRepresentable]
+    // MARK: - Public Variables
+    
+    public weak var tableView: UITableView?
+    
+    public var sections: [FormSectionRepresentable] {
+        didSet {
+            sections.flatMap { $0.fields }.forEach { field in
+                field.form = self
+                field.tableView = tableView
+            }
+        }
+    }
+    
+    // MARK: - Private Variables
     
     private var isRegisteredCells: Bool = false
     
-    private weak var tableView: UITableView?
-
+    // MARK: - Life Cycle
+    
     public init(tableView: UITableView, sections: FormSectionRepresentable...) {
         self.tableView = tableView
         self.sections = sections
@@ -23,6 +36,8 @@ public class Form: NSObject, FormRepresentable {
         
         setupTableView()
     }
+    
+    // MARK: - Private Methods
     
     private func setupTableView() {
         tableView?.delegate = self
@@ -39,14 +54,6 @@ public class Form: NSObject, FormRepresentable {
         }
         
         isRegisteredCells = true
-    }
-    
-}
-
-extension Form {
-    
-    func indexPath(at field: FormFieldRepresentable) -> IndexPath? {
-        return nil
     }
     
 }
@@ -73,10 +80,7 @@ extension Form: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         registerCells()
-        
         let field = sections[indexPath.section].fields[indexPath.row]
-        field.tableView = tableView
-        
         return tableView.dequeueReusableCell(with: field, indexPath: indexPath)
     }
     
