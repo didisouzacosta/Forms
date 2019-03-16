@@ -11,39 +11,34 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="63" id="0gf-gF-uob" customClass="ButtomFormFieldCell" customModule="Forms" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="58" id="0gf-gF-uob" customClass="ButtomFormFieldCell" customModule="Forms" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="58"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0gf-gF-uob" id="iZJ-E4-0BG">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="62.5"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0gf-gF-uob" id="iZJ-E4-0BG">
+                <rect key="frame" x="0.0" y="0.0" width="376" height="57.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kdR-va-PPt">
-                        <rect key="frame" x="16" y="11" width="343" height="44"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVq-NI-tk9">
-                                <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="0.019607843140000001" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVq-NI-tk9">
+                        <rect key="frame" x="16" y="11" width="344" height="36"/>
                         <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="OKd-Jm-XJG"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="44" id="31f-7L-QgO"/>
                         </constraints>
-                    </stackView>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <color key="textColor" red="0.019607843140000001" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="kdR-va-PPt" firstAttribute="leading" secondItem="iZJ-E4-0BG" secondAttribute="leadingMargin" id="437-23-X3U"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="kdR-va-PPt" secondAttribute="trailing" id="Dbf-Bq-Gjy"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="kdR-va-PPt" secondAttribute="bottom" id="Wx9-ic-OlM"/>
-                    <constraint firstItem="kdR-va-PPt" firstAttribute="top" secondItem="iZJ-E4-0BG" secondAttribute="topMargin" id="fjD-Bt-pH1"/>
+                    <constraint firstItem="MVq-NI-tk9" firstAttribute="leading" secondItem="iZJ-E4-0BG" secondAttribute="leadingMargin" id="4AX-uZ-zbZ"/>
+                    <constraint firstItem="MVq-NI-tk9" firstAttribute="top" secondItem="iZJ-E4-0BG" secondAttribute="topMargin" id="4dn-uM-KSi"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="MVq-NI-tk9" secondAttribute="bottom" id="TYx-1j-Kd0"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="MVq-NI-tk9" secondAttribute="trailing" id="v4W-Qe-Egw"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="labelLabel" destination="MVq-NI-tk9" id="d2e-fD-Kck"/>
             </connections>
-            <point key="canvasLocation" x="-116" y="4.0479760119940034"/>
+            <point key="canvasLocation" x="-116.8" y="1.7991004497751126"/>
         </tableViewCell>
     </objects>
 </document>

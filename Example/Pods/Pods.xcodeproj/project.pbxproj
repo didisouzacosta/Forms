@@ -11,7 +11,7 @@
 		1800D56825E1B5A8CFCB40C6B32D5321 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		25C18D64DE404BD48224041AB96FDAB7 /* Forms-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 283941A47F551A0A0E913E6FA12D1EB9 /* Forms-dummy.m */; };
 		2CC59D5ECB0032646EDA7AC64D039C85 /* UIColor+Facilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE706E2B1664DEDBD396A127C312326 /* UIColor+Facilities.swift */; };
-		3B97A42DA224301CF793DF3FCE0CDECF /* SectionFormRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853B6A052B521EED5307C4A88138B41 /* SectionFormRepresentable.swift */; };
+		3B97A42DA224301CF793DF3FCE0CDECF /* FormSectionRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853B6A052B521EED5307C4A88138B41 /* FormSectionRepresentable.swift */; };
 		3BB03CAD264D5F25B7C5CC38E9964E87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		3F12F4EB7BBD2EE24F97137B72E131E6 /* Forms-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1718860FCA4351134FD8B1849F161642 /* Forms-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F1D7C4F7FA65F45A42CDF4151E00BC1 /* DateFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F836A5E2470CAA7F8E459E19AFF189A /* DateFormField.swift */; };
@@ -81,7 +81,7 @@
 		1FE706E2B1664DEDBD396A127C312326 /* UIColor+Facilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Facilities.swift"; sourceTree = "<group>"; };
 		23CCABCE99A2BF4A3138F48AE5DC2F12 /* Pods-Forms_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Forms_Tests-Info.plist"; sourceTree = "<group>"; };
 		283941A47F551A0A0E913E6FA12D1EB9 /* Forms-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Forms-dummy.m"; sourceTree = "<group>"; };
-		2853B6A052B521EED5307C4A88138B41 /* SectionFormRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SectionFormRepresentable.swift; sourceTree = "<group>"; };
+		2853B6A052B521EED5307C4A88138B41 /* FormSectionRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormSectionRepresentable.swift; sourceTree = "<group>"; };
 		3953F49B046DB1B03F28247374683C10 /* SelectFieldValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SelectFieldValue.swift; sourceTree = "<group>"; };
 		3A5616C68F5D7CC3DBA24FCFEFB433CB /* RuleFieldSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RuleFieldSet.swift; sourceTree = "<group>"; };
 		3D7BCAE62C3CCD7F7B7D39EDC6BC8944 /* BaseFormField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseFormField.swift; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 				7DCC62141D656A9AA3491319E4398CAB /* FormRepresentable.swift */,
 				FAC92D1B704F4EBED136FC3CEEBF182B /* FormRuleRepresentable.swift */,
 				3A5616C68F5D7CC3DBA24FCFEFB433CB /* RuleFieldSet.swift */,
-				2853B6A052B521EED5307C4A88138B41 /* SectionFormRepresentable.swift */,
+				2853B6A052B521EED5307C4A88138B41 /* FormSectionRepresentable.swift */,
 				3953F49B046DB1B03F28247374683C10 /* SelectFieldValue.swift */,
 				E173DAE12237D1D700C92C52 /* Validatable.swift */,
 				E173DAE32239177100C92C52 /* FormIdentifiable.swift */,
@@ -558,7 +558,7 @@
 				A8B1F15EC171316BFFD3054BA6211944 /* RequiredFormRule.swift in Sources */,
 				83DC3F27C60FAC48645EA78E2D3BB066 /* RuleFieldSet.swift in Sources */,
 				62A94FABFEDA5D55C7140BE6C174A94C /* SectionForm.swift in Sources */,
-				3B97A42DA224301CF793DF3FCE0CDECF /* SectionFormRepresentable.swift in Sources */,
+				3B97A42DA224301CF793DF3FCE0CDECF /* FormSectionRepresentable.swift in Sources */,
 				E9E9831DFE86CB1B06A4F19B1AD65D25 /* SelectFieldValue.swift in Sources */,
 				588238F12202522ED900E9B61C8BCFCA /* SelectFormField.swift in Sources */,
 				8DFB0CD178F42E05CC5273623C57ED2A /* SwitchFormField.swift in Sources */,

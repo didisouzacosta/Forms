@@ -34,16 +34,6 @@ public class Form: NSObject, FormRepresentable {
         tableView?.estimatedRowHeight = 54.0
     }
     
-    private func registerCells() {
-        guard isRegisteredCells == false else { return }
-        
-        sections.flatMap { $0.fields }.forEach { [weak tableView] field in
-            tableView?.register(field.nib, forCellReuseIdentifier: field.cellIdentifier)
-        }
-        
-        isRegisteredCells = true
-    }
-    
 }
 
 extension Form: UITableViewDelegate {
@@ -67,7 +57,6 @@ extension Form: UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        registerCells()
         let field = sections[indexPath.section].fields[indexPath.row]
         return tableView.dequeueReusableCell(with: field, indexPath: indexPath)
     }

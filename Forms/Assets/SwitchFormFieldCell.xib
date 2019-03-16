@@ -42,9 +42,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="0wN-t8-ftZ"/>
-                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>

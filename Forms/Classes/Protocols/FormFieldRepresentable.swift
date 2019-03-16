@@ -22,17 +22,23 @@ public protocol FormFieldRepresentable: class, RuleFieldSet, Validatable, FormId
 }
 
 fileprivate struct AssociatedKeys {
-    static var formKey = "form.key"
-    static var tableViewKey = "tableView.key"
+    static var formSectionKey = "formSection.key"
 }
 
 public extension FormFieldRepresentable {
+    
+    internal var section: FormSectionRepresentable? {
+        get { return objc_getAssociatedObject(self, &AssociatedKeys.formSectionKey) as? FormSectionRepresentable }
+        set { objc_setAssociatedObject(self, &AssociatedKeys.formSectionKey, newValue, .OBJC_ASSOCIATION_ASSIGN) }
+    }
     
     public var nib: UINib {
         return UINib(nibName: cellIdentifier, bundle: Bundle(for: type(of: self)))
     }
     
     public func reload() {
+        let tableView = section?.form?.tableView
+        
         tableView?.beginUpdates()
         
         (tableView?.indexPathsForVisibleRows ?? [])
@@ -43,17 +49,7 @@ public extension FormFieldRepresentable {
     }
     
     public func scroll() {
-        form?.scroll(to: self)
-    }
-    
-    internal var form: FormRepresentable? {
-        get { return objc_getAssociatedObject(self, &AssociatedKeys.formKey) as? FormRepresentable }
-        set { objc_setAssociatedObject(self, &AssociatedKeys.formKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
-    }
-    
-    internal weak var tableView: UITableView? {
-        get { return objc_getAssociatedObject(self, &AssociatedKeys.tableViewKey) as? UITableView }
-        set { objc_setAssociatedObject(self, &AssociatedKeys.tableViewKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
+        section?.form?.scroll(to: self)
     }
     
 }

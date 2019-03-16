@@ -46,7 +46,7 @@
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="lEA-Vs-ObF"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="44" id="lEA-Vs-ObF"/>
                         </constraints>
                     </stackView>
                 </subviews>

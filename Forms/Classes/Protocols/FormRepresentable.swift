@@ -8,15 +8,16 @@
 public protocol FormRepresentable: Validatable {
     
     var tableView: UITableView? { get }
-    var sections: [FormSectionRepresentable] { get }
     
     mutating func add(section: FormSectionRepresentable)
     mutating func add(sections: [FormSectionRepresentable])
     mutating func remove(section: FormSectionRepresentable)
+    mutating func remove(sections: [FormSectionRepresentable])
     
     func indexPath(at field: FormFieldRepresentable) -> IndexPath?
     func scroll(to indexPath: IndexPath)
     func scroll(to field: FormFieldRepresentable)
+    func reloadData()
     
 }
 
@@ -32,18 +33,17 @@ extension FormRepresentable {
     
     private var _sections: [FormSectionRepresentable] {
         get { return objc_getAssociatedObject(self, &AssociatedKeys.sectionsKey) as? [FormSectionRepresentable] ?? [] }
-        set { objc_setAssociatedObject(self, &AssociatedKeys.sectionsKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
+        set {
+            objc_setAssociatedObject(self, &AssociatedKeys.sectionsKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            reloadData()
+        }
     }
     
     public mutating func add(section: FormSectionRepresentable) {
-        section.fields.forEach { field in
-            field.tableView = tableView
-            field.form = self
-        }
-        
+        var section = section
+        section.form = self
+        section.fields.forEach { tableView?.register($0.nib, forCellReuseIdentifier: $0.cellIdentifier) }
         _sections.append(section)
-        
-        tableView?.reloadData()
     }
     
     public mutating func add(sections: [FormSectionRepresentable]) {
@@ -53,7 +53,10 @@ extension FormRepresentable {
     public mutating func remove(section: FormSectionRepresentable) {
         guard let index = sections.firstIndex(where: { $0.identifier == section.identifier }) else { return }
         _sections.remove(at: index)
-        tableView?.reloadData()
+    }
+    
+    public mutating func remove(sections: [FormSectionRepresentable]) {
+        sections.forEach { remove(section: $0) }
     }
     
     public func indexPath(at field: FormFieldRepresentable) -> IndexPath? {
@@ -76,6 +79,10 @@ extension FormRepresentable {
     public func scroll(to field: FormFieldRepresentable) {
         guard let indexPath = indexPath(at: field) else { return }
         scroll(to: indexPath)
+    }
+    
+    public func reloadData() {
+        tableView?.reloadData()
     }
     
     @discardableResult

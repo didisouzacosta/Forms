@@ -17,6 +17,8 @@ class ViewController: UIViewController {
        return Form(tableView: tableView)
     }()
     
+    var firstSection = SectionForm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,24 +38,13 @@ class ViewController: UIViewController {
             RequiredFormRule(message: "O campo 'Aniversário' e obrigatório.")
         ]
         
-        let buttomField = ButtomFormField(text: "Cadastrar", type: .submit) { [weak self] in
-            do {
-                try self?.form.validate()
-            } catch {
-                self?.show(error: error)
-            }
-        }
-        
-        let fields = (1...9000).map { index in
+        let fields = (1...3).map { index in
             return SwitchFormField(label: "Label \(index)")
         }
         
-        let firstSection = SectionForm()
-        firstSection.fields.append(contentsOf: fields)
+        firstSection.add(fields: fields)
         
-        let lastSection = SectionForm(fields: buttomField)
-        
-        form.add(sections: [firstSection, lastSection])
+        form.add(sections: [firstSection])
         
     }
     
@@ -64,7 +55,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction private func scroll() {
-        form.sections.last?.fields.last?.scroll()
+        let buttomField = ButtomFormField(text: "Cadastrar", type: .submit) { [weak self] in
+            do {
+                try self?.form.validate()
+            } catch {
+                self?.show(error: error)
+            }
+        }
+        
+        firstSection.add(field: buttomField)
     }
 
 }

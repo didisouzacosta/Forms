@@ -7,10 +7,6 @@
 
 public final class SectionForm: FormSectionRepresentable {
     
-    public var fields: [FormFieldRepresentable]
-    
-    public init(fields: FormFieldRepresentable...) {
-        self.fields = fields
-    }
+    public init() {}
     
 }
