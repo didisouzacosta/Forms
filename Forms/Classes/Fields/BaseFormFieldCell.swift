@@ -7,9 +7,9 @@
 
 import UIKit
 
-public typealias FormFieldCell = UITableViewCell & FormCellRepresentable
+public typealias FormFieldCell = UITableViewCell & FormCellProtocol
 
-public class BaseFormFieldCell<T: FormFieldRepresentable>: FormFieldCell {
+public class BaseFormFieldCell<T: FormFieldProtocol>: FormFieldCell {
     
     // MARK: - Public Variables
     
@@ -28,7 +28,7 @@ public class BaseFormFieldCell<T: FormFieldRepresentable>: FormFieldCell {
     
     // MARK: - Public Methods
     
-    final public func setup(with field: FormFieldRepresentable) {
+    final public func setup(with field: FormFieldProtocol) {
         self.field = field as? T
         setupContent()
     }

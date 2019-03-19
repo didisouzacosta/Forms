@@ -1,5 +1,5 @@
 //
-//  FormCellRepresentable.swift
+//  FormCellProtocol.swift
 //  Forms
 //
 //  Created by Adriano Souza Costa on 04/03/19.
@@ -7,19 +7,19 @@
 
 import UIKit
 
-public typealias FormCell = FormCellRepresentable & UITableViewCell
+public typealias FormCell = FormCellProtocol & UITableViewCell
 
-public protocol FormCellRepresentable: class {
+public protocol FormCellProtocol: class {
     
     static var identifier: String { get }
     var reuseIdentifier: String? { get }
     
-    func setup(with field: FormFieldRepresentable)
+    func setup(with field: FormFieldProtocol)
     func setupContent()
     
 }
 
-extension FormCellRepresentable {
+extension FormCellProtocol {
     
     public var reuseIdentifier: String? {
         return type(of: self).identifier

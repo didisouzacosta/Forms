@@ -1,17 +1,17 @@
 //
-//  CountRepresentable.swift
+//  Countable.swift
 //  Forms
 //
 //  Created by Adriano Souza Costa on 02/03/19.
 //
 
-public protocol CountRepresentable {
+public protocol Countable {
     
     var valueCount: Float { get }
     
 }
 
-extension Date: CountRepresentable {
+extension Date: Countable {
     
     public var valueCount: Float {
         return Float(self.timeIntervalSinceReferenceDate)
@@ -19,7 +19,7 @@ extension Date: CountRepresentable {
     
 }
 
-extension Data: CountRepresentable {
+extension Data: Countable {
     
     public var valueCount: Float {
         return Float(count)
@@ -27,7 +27,7 @@ extension Data: CountRepresentable {
     
 }
 
-extension Int: CountRepresentable {
+extension Int: Countable {
     
     public var valueCount: Float {
         return Float(self)
@@ -35,7 +35,7 @@ extension Int: CountRepresentable {
     
 }
 
-extension String: CountRepresentable {
+extension String: Countable {
     
     public var valueCount: Float {
         return Float(count)
@@ -43,7 +43,7 @@ extension String: CountRepresentable {
     
 }
 
-extension Array: CountRepresentable {
+extension Array: Countable {
     
     public var valueCount: Float {
         return Float(count)

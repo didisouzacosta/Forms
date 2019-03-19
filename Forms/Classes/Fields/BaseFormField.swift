@@ -5,14 +5,14 @@
 //  Created by Adriano Souza Costa on 01/03/19.
 //
 
-public class BaseFormField<T: Equatable>: FormFieldRepresentable {
+public class BaseFormField<T: Equatable>: FormFieldProtocol {
     
     public typealias ValueType = T
     public typealias UpdatedValueHandler = (_ newValue: ValueType?, _ oldValue: ValueType?) -> Void
     
     // MARK: - Public Variables
     
-    public var rules: [FormRuleRepresentable] = []
+    public var rules: [FormRuleProtocol] = []
     public var placeholder: String?
     public var label: String
     

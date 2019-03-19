@@ -5,7 +5,7 @@
 //  Created by Adriano Souza Costa on 03/03/19.
 //
 
-public class BaseFormRule<T>: FormRuleRepresentable {
+public class BaseFormRule<T>: FormRuleProtocol {
     
     public var message: String
     

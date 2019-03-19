@@ -1,5 +1,5 @@
 //
-//  FormFieldRepresentable.swift
+//  FormFieldProtocol.swift
 //  Forms
 //
 //  Created by Adriano Souza Costa on 01/03/19.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol FormFieldRepresentable: class, RuleFieldSet, Validatable, FormIdentifiable {
+public protocol FormFieldProtocol: class, RuleFieldSetProtocol, Validatable, FormIdentifiable {
     
     var label: String { get }
     var placeholder: String? { get }
@@ -25,10 +25,10 @@ fileprivate struct AssociatedKeys {
     static var formSectionKey = "formSection.key"
 }
 
-public extension FormFieldRepresentable {
+public extension FormFieldProtocol {
     
-    internal var section: FormSectionRepresentable? {
-        get { return objc_getAssociatedObject(self, &AssociatedKeys.formSectionKey) as? FormSectionRepresentable }
+    internal var section: FormSectionProtocol? {
+        get { return objc_getAssociatedObject(self, &AssociatedKeys.formSectionKey) as? FormSectionProtocol }
         set { objc_setAssociatedObject(self, &AssociatedKeys.formSectionKey, newValue, .OBJC_ASSOCIATION_ASSIGN) }
     }
     

@@ -5,40 +5,40 @@
 //  Created by Adriano Souza Costa on 02/03/19.
 //
 
-public protocol EmptyRepresentable {
+public protocol EmptyValueRepresentable {
     
     var valueIsEmpty: Bool { get }
     
 }
 
-extension String: EmptyRepresentable {
+extension String: EmptyValueRepresentable {
     public var valueIsEmpty: Bool { return self.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
 }
 
-extension Data: EmptyRepresentable {
+extension Data: EmptyValueRepresentable {
     public var valueIsEmpty: Bool { return isEmpty }
 }
 
-extension Date: EmptyRepresentable {
+extension Date: EmptyValueRepresentable {
     public var valueIsEmpty: Bool { return false }
 }
 
-extension Bool: EmptyRepresentable {
+extension Bool: EmptyValueRepresentable {
     public var valueIsEmpty: Bool { return self == false }
 }
 
-extension CGPoint: EmptyRepresentable {
+extension CGPoint: EmptyValueRepresentable {
     public var valueIsEmpty: Bool { return false }
 }
 
-extension Double: EmptyRepresentable {
+extension Double: EmptyValueRepresentable {
     public var valueIsEmpty: Bool { return self <= 0.0 }
 }
 
-extension Float: EmptyRepresentable {
+extension Float: EmptyValueRepresentable {
     public var valueIsEmpty: Bool { return self <= 0.0 }
 }
 
-extension Int: EmptyRepresentable {
+extension Int: EmptyValueRepresentable {
     public var valueIsEmpty: Bool { return self <= 0 }
 }

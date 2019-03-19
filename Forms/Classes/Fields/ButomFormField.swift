@@ -24,7 +24,7 @@ public enum ButtomFormType {
     
 }
 
-final public class ButtomFormField: FormFieldRepresentable, FormFieldCellSelectable {
+final public class ButtomFormField: FormFieldProtocol, FormFieldCellSelectable {
     
     public var text: String
     public var type: ButtomFormType
@@ -40,7 +40,7 @@ final public class ButtomFormField: FormFieldRepresentable, FormFieldCellSelecta
         return nil
     }
     
-    public var rules: [FormRuleRepresentable] {
+    public var rules: [FormRuleProtocol] {
         get { return [] }
         set {}
     }

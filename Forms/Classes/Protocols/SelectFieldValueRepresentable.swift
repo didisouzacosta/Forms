@@ -1,5 +1,5 @@
 //
-//  SelectFieldValue.swift
+//  SelectFieldValueRepresentable.swift
 //  Forms
 //
 //  Created by Adriano Souza Costa on 09/03/19.
@@ -7,40 +7,40 @@
 
 import Foundation
 
-public protocol SelectFieldValue: EmptyRepresentable {
+public protocol SelectFieldValueRepresentable: EmptyValueRepresentable {
     
     var valueDescription: String? { get }
     
 }
 
-extension String: SelectFieldValue {
+extension String: SelectFieldValueRepresentable {
     public var valueDescription: String? { return self }
 }
 
-extension Bool: SelectFieldValue {
+extension Bool: SelectFieldValueRepresentable {
     public var valueDescription: String? { return String(describing: self) }
 }
 
-extension Double: SelectFieldValue {
+extension Double: SelectFieldValueRepresentable {
     public var valueDescription: String? { return String(describing: self) }
 }
 
-extension Float: SelectFieldValue {
+extension Float: SelectFieldValueRepresentable {
     public var valueDescription: String? { return String(describing: self) }
 }
 
-extension CGPoint: SelectFieldValue {
+extension CGPoint: SelectFieldValueRepresentable {
     public var valueDescription: String? { return String(describing: self) }
 }
 
-extension Data: SelectFieldValue {
+extension Data: SelectFieldValueRepresentable {
     public var valueDescription: String? { return String(describing: self) }
 }
 
-extension Date: SelectFieldValue {
+extension Date: SelectFieldValueRepresentable {
     public var valueDescription: String? { return String(describing: self) }
 }
 
-extension Int: SelectFieldValue {
+extension Int: SelectFieldValueRepresentable {
     public var valueDescription: String? { return String(describing: self) }
 }

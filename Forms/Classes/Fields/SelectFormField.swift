@@ -7,14 +7,14 @@
 
 import UIKit
 
-final public class SelectFormField: FormFieldRepresentable, FormFieldCellSelectable {
+final public class SelectFormField: FormFieldProtocol, FormFieldCellSelectable {
     
     public var label: String
     public var isEnabled: Bool = true
     public var acessory: UITableViewCell.AccessoryType
     public var placeholder: String?
     
-    public var value: SelectFieldValue {
+    public var value: SelectFieldValueRepresentable {
         didSet { reload() }
     }
     
@@ -23,7 +23,7 @@ final public class SelectFormField: FormFieldRepresentable, FormFieldCellSelecta
         set {}
     }
     
-    public var rules: [FormRuleRepresentable] = []
+    public var rules: [FormRuleProtocol] = []
     
     public func validate() throws -> Bool {
         return true
@@ -39,7 +39,7 @@ final public class SelectFormField: FormFieldRepresentable, FormFieldCellSelecta
     
     // MARK: - Life Cycle
     
-    public init<T: SelectFieldValue>( value: T, label: String, placeholder: String? = nil, acessory: UITableViewCell.AccessoryType = .disclosureIndicator, handler: @escaping (T?) -> Void) {
+    public init<T: SelectFieldValueRepresentable>( value: T, label: String, placeholder: String? = nil, acessory: UITableViewCell.AccessoryType = .disclosureIndicator, handler: @escaping (T?) -> Void) {
         self.value = value
         self.label = label
         self.placeholder = placeholder
