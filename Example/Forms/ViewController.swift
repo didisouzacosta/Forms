@@ -63,7 +63,7 @@ class ViewController: UIViewController {
             }
         }
         
-        firstSection.add(field: buttomField)
+        firstSection.add(field: buttomField, position: 2)
     }
 
 }

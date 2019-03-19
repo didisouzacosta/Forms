@@ -9,7 +9,7 @@ public protocol FormRepresentable: Validatable {
     
     var tableView: UITableView? { get }
     
-    mutating func add(section: FormSectionRepresentable)
+    mutating func add(section: FormSectionRepresentable, position: Int?)
     mutating func add(sections: [FormSectionRepresentable])
     mutating func remove(section: FormSectionRepresentable)
     mutating func remove(sections: [FormSectionRepresentable])
@@ -39,11 +39,16 @@ extension FormRepresentable {
         }
     }
     
-    public mutating func add(section: FormSectionRepresentable) {
+    public mutating func add(section: FormSectionRepresentable, position: Int? = nil) {
         var section = section
         section.form = self
         section.fields.forEach { tableView?.register($0.nib, forCellReuseIdentifier: $0.cellIdentifier) }
-        _sections.append(section)
+        
+        if let position = position, position >= 0, position <= _sections.count - 1 {
+            _sections.insert(section, at: position)
+        } else {
+            _sections.append(section)
+        }
     }
     
     public mutating func add(sections: [FormSectionRepresentable]) {

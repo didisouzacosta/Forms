@@ -9,7 +9,7 @@ import Foundation
 
 public protocol FormSectionRepresentable: FormIdentifiable, Validatable {
     
-    mutating func add(field: FormFieldRepresentable)
+    mutating func add(field: FormFieldRepresentable, position: Int?)
     mutating func add(fields: [FormFieldRepresentable])
     mutating func remove(field: FormFieldRepresentable)
     mutating func remove(fields: [FormFieldRepresentable])
@@ -40,10 +40,15 @@ extension FormSectionRepresentable {
         return _fields
     }
     
-    public mutating func add(field: FormFieldRepresentable) {
+    public mutating func add(field: FormFieldRepresentable, position: Int? = nil) {
         field.section = self
         form?.tableView?.register(field.nib, forCellReuseIdentifier: field.cellIdentifier)
-        _fields.append(field)
+        
+        if let position = position, position >= 0, position <= _fields.count - 1 {
+            _fields.insert(field, at: position)
+        } else {
+            _fields.append(field)
+        }
     }
     
     public mutating func add(fields: [FormFieldRepresentable]) {
