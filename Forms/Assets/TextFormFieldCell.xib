@@ -19,37 +19,37 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DoK-Ka-pu7">
-                        <rect key="frame" x="16" y="11" width="343" height="54.5"/>
+                        <rect key="frame" x="16" y="11" width="343" height="44"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jY2-TR-f7U">
-                                <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="29.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpw-3E-Hmy">
-                                        <rect key="frame" x="0.0" y="0.0" width="42" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="29.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aq7-DY-WcQ">
-                                        <rect key="frame" x="50" y="0.0" width="293" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="HbY-yP-jfi"/>
-                                        </constraints>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Aq7-DY-WcQ">
+                                        <rect key="frame" x="50" y="0.0" width="293" height="29.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Hpw-3E-Hmy" firstAttribute="width" relation="lessThanOrEqual" secondItem="jY2-TR-f7U" secondAttribute="width" multiplier="1:2" id="OvV-UY-NLa"/>
+                                </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mF1-xw-vcn">
-                                <rect key="frame" x="0.0" y="40" width="343" height="14.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mF1-xw-vcn">
+                                <rect key="frame" x="0.0" y="29.5" width="343" height="14.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="l5G-jL-bOr"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="44" id="l5G-jL-bOr"/>
                         </constraints>
                     </stackView>
                 </subviews>
@@ -61,11 +61,12 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="errorLabel" destination="mF1-xw-vcn" id="cGl-Sh-ROr"/>
-                <outlet property="labelLabel" destination="Hpw-3E-Hmy" id="crE-Rg-wkh"/>
-                <outlet property="valueLabel" destination="Aq7-DY-WcQ" id="JhR-AD-Htt"/>
+                <outlet property="_contentStack" destination="DoK-Ka-pu7" id="7QK-l4-AMx"/>
+                <outlet property="_errorLabel" destination="mF1-xw-vcn" id="khP-bh-96e"/>
+                <outlet property="_titleLabel" destination="Hpw-3E-Hmy" id="pTJ-2O-Bsh"/>
+                <outlet property="textField" destination="Aq7-DY-WcQ" id="LZi-HO-yG6"/>
             </connections>
-            <point key="canvasLocation" x="-116" y="31"/>
+            <point key="canvasLocation" x="-538" y="-108"/>
         </tableViewCell>
     </objects>
 </document>

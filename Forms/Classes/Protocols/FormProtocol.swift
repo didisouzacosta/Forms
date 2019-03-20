@@ -31,6 +31,14 @@ extension FormProtocol {
         return _sections
     }
     
+    public var isValid: Bool {
+        return errors.isEmpty
+    }
+    
+    public var errors: [Error] {
+        return sections.flatMap { $0.fields }.flatMap { $0.errors }
+    }
+    
     private var _sections: [FormSectionProtocol] {
         get { return objc_getAssociatedObject(self, &AssociatedKeys.sectionsKey) as? [FormSectionProtocol] ?? [] }
         set {
@@ -90,10 +98,16 @@ extension FormProtocol {
         tableView?.reloadData()
     }
     
-    @discardableResult
-    public func validate() throws -> Bool {
-        return try sections.reduce(true) { (result, section) -> Bool in
-            return try section.validate() == result
+    public func validate() throws {
+        if let error = sections.flatMap ({ $0.fields }).compactMap ({ field -> Error? in
+            do {
+                try field.validate()
+                return nil
+            } catch {
+                return error
+            }
+        }).first {
+            throw error
         }
     }
     

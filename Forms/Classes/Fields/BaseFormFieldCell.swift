@@ -13,6 +13,10 @@ public class BaseFormFieldCell<T: FormFieldProtocol>: FormFieldCell {
     
     // MARK: - Public Variables
     
+    weak var titleLabel: UILabel? { return nil }
+    weak var errorLabel: UILabel? { return nil }
+    weak var contentStack: UIStackView? { return nil }
+    
     public override var isUserInteractionEnabled: Bool {
         get { return field?.isEnabled ?? true }
         set { field?.isEnabled = newValue }
@@ -22,9 +26,7 @@ public class BaseFormFieldCell<T: FormFieldProtocol>: FormFieldCell {
     
     internal weak var field: T?
     
-    internal var labelOutlet: UILabel? { return nil }
-    internal var errorOutlet: UILabel? { return nil }
-    internal var stackOutlet: UIStackView? { return nil }
+    // MARK: Outlets
     
     // MARK: - Public Methods
     
@@ -34,8 +36,17 @@ public class BaseFormFieldCell<T: FormFieldProtocol>: FormFieldCell {
     }
     
     public func setupContent() {
-        labelOutlet?.text = field?.label
-        errorOutlet?.isHidden = true
+        guard let field = field else { return }
+        
+        titleLabel?.text = field.title
+        
+        if field.showErros {
+            errorLabel?.isHidden = field.isValid
+            errorLabel?.text = field.errors.first?.localizedDescription
+            errorLabel?.textColor = .red
+        } else {
+            errorLabel?.isHidden = true
+        }
         
         UIView.animate(withDuration: 0.26) { [weak self] in
             guard let self = self else { return }

@@ -32,10 +32,13 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JcE-PF-R8k">
                                         <rect key="frame" x="294" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="valueChanged:" destination="pxi-zM-uZ7" eventType="valueChanged" id="S83-TM-nsA"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZV-1M-Pwc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZV-1M-Pwc">
                                 <rect key="frame" x="0.0" y="37" width="343" height="14.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -43,7 +46,7 @@
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="0wN-t8-ftZ"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="44" id="0wN-t8-ftZ"/>
                         </constraints>
                     </stackView>
                 </subviews>
@@ -55,8 +58,9 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="errorLabel" destination="GZV-1M-Pwc" id="FaT-V4-8Fi"/>
-                <outlet property="labelLabel" destination="97X-fc-dsg" id="vCc-X7-5RA"/>
+                <outlet property="_contentStack" destination="ht3-Nk-Ed9" id="Uao-3D-gop"/>
+                <outlet property="_errorLabel" destination="GZV-1M-Pwc" id="Ovl-NZ-dDx"/>
+                <outlet property="_titleLabel" destination="97X-fc-dsg" id="yik-BG-Tdu"/>
                 <outlet property="valueSwitch" destination="JcE-PF-R8k" id="gHa-Rm-5lS"/>
             </connections>
             <point key="canvasLocation" x="-39.200000000000003" y="-259.52023988005999"/>

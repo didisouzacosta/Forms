@@ -28,6 +28,21 @@ extension FormSectionProtocol {
         set { objc_setAssociatedObject(self, &AssociatedKeys.formKey, newValue, .OBJC_ASSOCIATION_ASSIGN) }
     }
     
+    public var isValid: Bool {
+        return errors.isEmpty
+    }
+    
+    public var errors: [Error] {
+        return fields.compactMap { field -> Error? in
+            do {
+                try field.validate()
+                return nil
+            } catch {
+                return error
+            }
+        }
+    }
+    
     private var _fields: [FormFieldProtocol] {
         get { return objc_getAssociatedObject(self, &AssociatedKeys.fieldsKey) as? [FormFieldProtocol] ?? [] }
         set {
@@ -64,10 +79,16 @@ extension FormSectionProtocol {
         fields.forEach { remove(field: $0) }
     }
     
-    @discardableResult
-    public func validate() throws -> Bool {
-        return try fields.reduce(true) { (result, field) -> Bool in
-            return try field.validate() == result
+    public func validate() throws {
+        if let error = fields.compactMap({ field -> Error? in
+            do {
+                try field.validate()
+                return nil
+            } catch {
+                return error
+            }
+        }).first {
+            throw error
         }
     }
     

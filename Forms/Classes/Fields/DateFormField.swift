@@ -22,13 +22,28 @@ final public class DateFormField: BaseFormField<Date> {
 
 public class DateFormFieldCell: BaseFormFieldCell<DateFormField> {
     
-    @IBOutlet private weak var labelLabel: UILabel?
-    @IBOutlet private weak var errorLabel: UILabel?
+    // MARK: - Private Variables
+    
+    override var titleLabel: UILabel? {
+        return _titleLabel
+    }
+    
+    override var errorLabel: UILabel? {
+        return _errorLabel
+    }
+    
+    override var contentStack: UIStackView? {
+        return _contentStack
+    }
+    
+    // MARK: Outlets
+    
+    @IBOutlet private weak var _titleLabel: UILabel?
+    @IBOutlet private weak var _errorLabel: UILabel?
+    @IBOutlet private weak var _contentStack: UIStackView?
     @IBOutlet private weak var valueLabel: UILabel?
     
-    override var labelOutlet: UILabel? { return labelLabel }
-    override var errorOutlet: UILabel? { return errorLabel }
-    override var stackOutlet: UIStackView? { return nil }
+    // MARK: - Public Methods
     
     public override func setupContent() {
         super.setupContent()

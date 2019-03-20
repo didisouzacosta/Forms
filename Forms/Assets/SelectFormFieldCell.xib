@@ -60,11 +60,6 @@
                     <constraint firstAttribute="trailingMargin" secondItem="brh-op-var" secondAttribute="trailing" id="Y3c-fG-qHY"/>
                 </constraints>
             </tableViewCellContentView>
-            <connections>
-                <outlet property="errorLabel" destination="PvA-L3-Egg" id="0BH-DP-nOf"/>
-                <outlet property="labelLabel" destination="j3b-EU-YGY" id="6KV-Gs-Wpq"/>
-                <outlet property="valueLabel" destination="hht-2b-s7L" id="GTM-Ta-hhy"/>
-            </connections>
             <point key="canvasLocation" x="-116" y="4.0479760119940034"/>
         </tableViewCell>
     </objects>

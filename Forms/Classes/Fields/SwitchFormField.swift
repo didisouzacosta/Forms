@@ -24,10 +24,6 @@ public class SwitchFormFieldCell: BaseFormFieldCell<SwitchFormField>, FormFieldC
     
     // MARK: - Public Variables
     
-    override var labelOutlet: UILabel? { return labelLabel }
-    override var errorOutlet: UILabel? { return errorLabel }
-    override var stackOutlet: UIStackView? { return nil }
-    
     public var handler: () -> Void {
         return { [weak self] in
             let newValue = !(self?.valueSwitch?.isOn ?? false)
@@ -37,19 +33,31 @@ public class SwitchFormFieldCell: BaseFormFieldCell<SwitchFormField>, FormFieldC
     }
     
     // MARK: - Private Variables
+    
+    override var titleLabel: UILabel? {
+        return _titleLabel
+    }
+    
+    override var errorLabel: UILabel? {
+        return _errorLabel
+    }
+    
+    override var contentStack: UIStackView? {
+        return _contentStack
+    }
+    
     // MARK: Outlets
     
-    @IBOutlet private weak var labelLabel: UILabel?
-    @IBOutlet private weak var errorLabel: UILabel?
+    @IBOutlet private weak var _titleLabel: UILabel?
+    @IBOutlet private weak var _errorLabel: UILabel?
+    @IBOutlet private weak var _contentStack: UIStackView?
     @IBOutlet private weak var valueSwitch: UISwitch?
     
     // MARK: - Public Methods
     
     public override func setupContent() {
         super.setupContent()
-        
         valueSwitch?.setOn(field?.value ?? false, animated: false)
-        valueSwitch?.addTarget(self, action: #selector(valueChanged(_:)), for: .valueChanged)
     }
     
     // MARK: - Private Methods

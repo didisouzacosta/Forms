@@ -7,7 +7,9 @@
 
 public protocol Validatable {
     
-    @discardableResult
-    func validate() throws -> Bool
+    var isValid: Bool { get }
+    var errors: [Error] { get }
+    
+    func validate() throws
     
 }

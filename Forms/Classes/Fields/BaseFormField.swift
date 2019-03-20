@@ -14,10 +14,21 @@ public class BaseFormField<T: Equatable>: FormFieldProtocol {
     
     public var rules: [FormRuleProtocol] = []
     public var placeholder: String?
-    public var label: String
+    public var title: String
     
     public var isEnabled: Bool = true {
         didSet { reload() }
+    }
+    
+    public var errors: [Error] {
+        return rules.compactMap { rule -> Error? in
+            do {
+                try rule.validate(value)
+                return nil
+            } catch {
+                return error
+            }
+        }
     }
     
     public var value: ValueType? {
@@ -25,7 +36,7 @@ public class BaseFormField<T: Equatable>: FormFieldProtocol {
             guard oldValue != value else { return }
             self.oldValue = oldValue
             valueUpdatedHandlers.forEach { $0(value, oldValue) }
-            reload()
+            _ = try? validate()
         }
     }
     
@@ -40,9 +51,9 @@ public class BaseFormField<T: Equatable>: FormFieldProtocol {
     
     // MARK: - Life Cycle
     
-    public init(value: ValueType? = nil, label: String, placeholder: String? = nil) {
+    public init(value: ValueType? = nil, title: String, placeholder: String? = nil) {
         self.value = value
-        self.label = label
+        self.title = title
         self.placeholder = placeholder
     }
     
@@ -56,9 +67,13 @@ public class BaseFormField<T: Equatable>: FormFieldProtocol {
         }
     }
     
-    public func validate() throws -> Bool {
-        return try rules.reduce(true) { (result, rule) -> Bool in
-            return try rule.validate(value) == result
+    public func validate() throws {
+        showErros = true
+        
+        reload()
+        
+        if let error = errors.first {
+            throw error
         }
     }
     

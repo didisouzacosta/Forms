@@ -58,7 +58,7 @@ extension Form: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let field = sections[indexPath.section].fields[indexPath.row]
-        return tableView.dequeueReusableCell(with: field, indexPath: indexPath)
+        return tableView.dequeueFormCell(with: field, indexPath: indexPath)
     }
     
     public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -69,10 +69,8 @@ extension Form: UITableViewDataSource {
 
 extension UITableView {
     
-    func dequeueReusableCell(with field: FormFieldProtocol, indexPath: IndexPath) -> FormCell {
-        guard let cell = dequeueReusableCell(withIdentifier: field.cellIdentifier, for: indexPath) as? FormCell else {
-            fatalError("Cell not corresponds of type 'FormCell'.")
-        }
+    func dequeueFormCell(with field: FormFieldProtocol, indexPath: IndexPath) -> FormCell {
+        let cell = dequeueReusableCell(withIdentifier: field.cellIdentifier, for: indexPath) as! FormCell
         cell.setup(with: field)
         return cell
     }

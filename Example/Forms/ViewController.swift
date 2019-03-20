@@ -22,27 +22,29 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nameField = TextFormField(label: "Nome completo", placeholder: "Insira seu nome aqui")
+        let nameField = TextFormField(title: "Nome completo", placeholder: "Insira seu nome aqui")
         nameField.rules = [
             RequiredFormRule(message: "O campo 'Nome' é obrigatório."),
             ExactLenghFormRule(exactLenght: 7, message: "O campo deve ter exatamente 7 caracters")
         ]
         
-        let emailField = TextFormField(label: "Email", placeholder: "Ex: email@email.com.br")
+        let emailField = TextFormField(title: "Email", placeholder: "Ex: email@email.com.br")
         emailField.rules = [
             RequiredFormRule(message: "O campo 'Email' é obrigatório.")
         ]
         
-        let birthdayField = DateFormField(label: "Nascimento", placeholder: "Informe sua data de nascimento")
+        let birthdayField = DateFormField(title: "Nascimento", placeholder: "Informe sua data de nascimento")
         birthdayField.rules = [
             RequiredFormRule(message: "O campo 'Aniversário' e obrigatório.")
         ]
         
-        let fields = (1...3).map { index in
-            return SwitchFormField(label: "Label \(index)")
+        let fields = (1...3).map { index -> SwitchFormField in
+            let field = SwitchFormField(title: "Label \(index)")
+            field.rules = [RequiredFormRule(message: "O campo \(index) é obrigatório.")]
+            return field
         }
         
-        firstSection.add(fields: fields)
+        firstSection.add(fields: fields + [nameField, emailField])
         
         form.add(sections: [firstSection])
         
@@ -55,15 +57,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction private func scroll() {
-        let buttomField = ButtomFormField(text: "Cadastrar", type: .submit) { [weak self] in
-            do {
-                try self?.form.validate()
-            } catch {
-                self?.show(error: error)
-            }
+        do {
+            try form.validate()
+        } catch {
+            show(error: error)
         }
-        
-        firstSection.add(field: buttomField, position: 2)
     }
 
 }

@@ -58,8 +58,6 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="errorLabel" destination="Yel-qM-2D8" id="AVc-XQ-v7G"/>
-                <outlet property="labelLabel" destination="IR1-5v-Ual" id="VHt-WI-eXA"/>
                 <outlet property="valueLabel" destination="Btr-Y6-LIq" id="Pci-ke-cMq"/>
             </connections>
             <point key="canvasLocation" x="-231.19999999999999" y="126.38680659670166"/>

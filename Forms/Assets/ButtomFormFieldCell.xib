@@ -21,7 +21,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVq-NI-tk9">
                         <rect key="frame" x="16" y="11" width="344" height="48"/>
                         <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="enn-8v-Fw8"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="34" id="enn-8v-Fw8"/>
                         </constraints>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         <color key="textColor" red="0.019607843140000001" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -36,7 +36,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="labelLabel" destination="MVq-NI-tk9" id="d2e-fD-Kck"/>
+                <outlet property="_titleLabel" destination="MVq-NI-tk9" id="t6d-nd-VTF"/>
             </connections>
             <point key="canvasLocation" x="-116.8" y="13.493253373313344"/>
         </tableViewCell>

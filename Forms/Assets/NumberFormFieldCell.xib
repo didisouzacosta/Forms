@@ -61,8 +61,9 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="errorLabel" destination="mF1-xw-vcn" id="cGl-Sh-ROr"/>
-                <outlet property="labelLabel" destination="Hpw-3E-Hmy" id="crE-Rg-wkh"/>
+                <outlet property="_contentStack" destination="DoK-Ka-pu7" id="yAK-Lo-2bN"/>
+                <outlet property="_errorLabel" destination="mF1-xw-vcn" id="Maz-Jr-Xfr"/>
+                <outlet property="_titleLabel" destination="Hpw-3E-Hmy" id="bYa-dB-KIQ"/>
                 <outlet property="valueLabel" destination="Aq7-DY-WcQ" id="JhR-AD-Htt"/>
             </connections>
             <point key="canvasLocation" x="-116" y="31"/>

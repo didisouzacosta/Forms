@@ -30,9 +30,10 @@ final public class ButtomFormField: FormFieldProtocol, FormFieldCellSelectable {
     public var type: ButtomFormType
     public var acessory: UITableViewCell.AccessoryType
     public var isEnabled: Bool = true
+    public var errors: [Error] = []
     public var handler: () -> Void = {}
     
-    public var label: String {
+    public var title: String {
         return ""
     }
     
@@ -45,9 +46,7 @@ final public class ButtomFormField: FormFieldProtocol, FormFieldCellSelectable {
         set {}
     }
     
-    public func validate() throws -> Bool {
-        return true
-    }
+    public func validate() throws {}
     
     public var cellIdentifier: String {
         return ButtomFormFieldCell.identifier
@@ -68,10 +67,12 @@ public class ButtomFormFieldCell: BaseFormFieldCell<ButtomFormField>, FormFieldC
     
     public var handler: () -> Void = {}
     
+    override var titleLabel: UILabel? { return _titleLabel }
+    
     // MARK: - Private Variables
     // MARK: Outlets
     
-    @IBOutlet private weak var labelLabel: UILabel?
+    @IBOutlet private weak var _titleLabel: UILabel?
     
     // MARK: - Public Methods
     
@@ -82,9 +83,9 @@ public class ButtomFormFieldCell: BaseFormFieldCell<ButtomFormField>, FormFieldC
         
         self.handler = field.handler
         
-        labelLabel?.textAlignment = field.acessory == .none ? .center : .left
-        labelLabel?.text = field.text
-        labelLabel?.textColor = field.type.color
+        titleLabel?.textAlignment = field.acessory == .none ? .center : .left
+        titleLabel?.text = field.text
+        titleLabel?.textColor = field.type.color
         
         accessoryType = field.acessory
     }
