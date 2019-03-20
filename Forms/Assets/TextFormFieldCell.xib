@@ -35,6 +35,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <action selector="updateText:" destination="yMU-DO-KwA" eventType="editingChanged" id="2Az-gy-Yda"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>

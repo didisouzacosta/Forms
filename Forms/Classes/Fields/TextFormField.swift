@@ -61,4 +61,10 @@ public class TextFormFieldCell: BaseFormFieldCell<TextFormField>, FormFieldCellS
         textField?.placeholder = field?.placeholder
     }
     
+    // MARK: - Private Methods
+    
+    @IBAction private func updateText(_ textField: UITextField) {
+        field?.text = textField.text
+    }
+    
 }

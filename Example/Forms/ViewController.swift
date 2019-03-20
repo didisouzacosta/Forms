@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         let nameField = TextFormField(title: "Nome completo", placeholder: "Insira seu nome aqui")
         nameField.rules = [
             RequiredFormRule(message: "O campo 'Nome' é obrigatório."),
-            ExactLenghFormRule(exactLenght: 7, message: "O campo deve ter exatamente 7 caracters")
+            ExactLenghFormRule(exactLenght: 7, message: "O campo nome deve ter exatamente 7 caracters")
         ]
         
         let emailField = TextFormField(title: "Email", placeholder: "Ex: email@email.com.br")
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         do {
             try form.validate()
         } catch {
-            show(error: error)
+            print(form.errors)
         }
     }
 
