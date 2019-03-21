@@ -9,6 +9,11 @@ import Foundation
 
 public protocol FormSectionProtocol: FormIdentifiable, Validatable {
     
+    var title: String? { get }
+    var footer: String? { get }
+    var headerView: UIView? { get }
+    var footerView: UIView? { get }
+    
     mutating func add(field: FormFieldProtocol, position: Int?)
     mutating func add(fields: [FormFieldProtocol])
     mutating func remove(field: FormFieldProtocol)

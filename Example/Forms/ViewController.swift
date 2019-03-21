@@ -13,9 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     
-    private lazy var form: Form = {
-       return Form(tableView: tableView)
-    }()
+    private lazy var form = Form(tableView: tableView)
     
     var firstSection = SectionForm()
     
@@ -46,7 +44,7 @@ class ViewController: UIViewController {
         
         firstSection.add(fields: fields + [nameField, emailField])
         
-        form.add(sections: [firstSection])
+        form.add(sections: [firstSection, firstSection, firstSection, firstSection])
         
     }
     

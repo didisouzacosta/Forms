@@ -52,6 +52,32 @@ extension Form: UITableViewDataSource {
         return sections.count
     }
     
+    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section].title
+    }
+    
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return sections[section].headerView
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let section = sections[section]
+        return section.headerView != nil || section.title != nil ? UITableView.automaticDimension : 0.0
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        let section = sections[section]
+        return section.footerView != nil || section.footer != nil ? UITableView.automaticDimension : 24.0
+    }
+    
+    public func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return sections[section].footer
+    }
+    
+    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return sections[section].footerView ?? UIView()
+    }
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections[section].fields.count
     }
@@ -59,10 +85,6 @@ extension Form: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let field = sections[indexPath.section].fields[indexPath.row]
         return tableView.dequeueFormCell(with: field, indexPath: indexPath)
-    }
-    
-    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return UIView()
     }
     
 }
