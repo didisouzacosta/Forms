@@ -36,7 +36,7 @@ extension FormProtocol {
     }
     
     public var errors: [Error] {
-        return sections.flatMap { $0.fields }.flatMap { $0.errors }
+        return sections.flatMap { $0.fields.flatMap { $0.errors } }
     }
     
     private var _sections: [FormSectionProtocol] {

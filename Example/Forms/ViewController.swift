@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     private lazy var form = Form(tableView: tableView)
     
-    var firstSection = SectionForm()
+    var firstSection = SectionForm(title: "Dados Pessoais")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         do {
             try form.validate()
         } catch {
-            print(form.errors)
+            print(error)
         }
     }
 

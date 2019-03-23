@@ -20,6 +20,10 @@ public class BaseFormField<T: Equatable>: FormFieldProtocol {
         didSet { reload() }
     }
     
+    public var isVisible: Bool = true {
+        didSet { reload() }
+    }
+    
     public var errors: [Error] {
         return rules.compactMap { rule -> Error? in
             do {

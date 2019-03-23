@@ -16,6 +16,7 @@ public protocol FormFieldProtocol: class, RuleFieldSetProtocol, FormIdentifiable
     
     var isEnabled: Bool { get set }
     var isValid: Bool { get }
+    var isVisible: Bool { get }
     var errors: [Error] { get }
     
     func reload()

@@ -67,7 +67,8 @@ extension Form: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         let section = sections[section]
-        return section.footerView != nil || section.footer != nil ? UITableView.automaticDimension : 24.0
+        let footerSpacing: CGFloat = section.title == nil && section.headerView == nil ? 20.0 : 0.0
+        return section.footerView != nil || section.footer != nil ? UITableView.automaticDimension : footerSpacing
     }
     
     public func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {

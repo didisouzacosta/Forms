@@ -30,6 +30,7 @@ final public class ButtomFormField: FormFieldProtocol, FormFieldCellSelectable {
     public var type: ButtomFormType
     public var acessory: UITableViewCell.AccessoryType
     public var isEnabled: Bool = true
+    public var isVisible: Bool = true
     public var errors: [Error] = []
     public var handler: () -> Void = {}
     
