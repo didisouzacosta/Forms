@@ -5,6 +5,8 @@
 //  Created by Adriano Souza Costa on 03/03/19.
 //
 
+import UIKit
+
 public protocol FormProtocol: Validatable {
     
     var tableView: UITableView? { get }
@@ -45,6 +47,10 @@ extension FormProtocol {
             objc_setAssociatedObject(self, &AssociatedKeys.sectionsKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             reloadData()
         }
+    }
+    
+    internal func visibleFieldsIn(section: Int) -> [FormFieldProtocol] {
+        return sections[section].fields.filter { !$0.isHidden }
     }
     
     public mutating func add(section: FormSectionProtocol, position: Int? = nil) {
@@ -90,7 +96,7 @@ extension FormProtocol {
     }
     
     public func scroll(to field: FormFieldProtocol) {
-        guard let indexPath = indexPath(at: field) else { return }
+        guard let indexPath = indexPath(at: field), field.isHidden == false else { return }
         scroll(to: indexPath)
     }
     

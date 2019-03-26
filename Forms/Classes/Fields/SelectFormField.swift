@@ -11,7 +11,6 @@ final public class SelectFormField: FormFieldProtocol, FormFieldCellSelectable {
     
     public var title: String
     public var isEnabled: Bool = true
-    public var isVisible: Bool = true
     public var errors: [Error] = []
     public var acessory: UITableViewCell.AccessoryType
     public var placeholder: String?

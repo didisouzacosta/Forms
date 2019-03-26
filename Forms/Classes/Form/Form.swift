@@ -52,6 +52,10 @@ extension Form: UITableViewDataSource {
         return sections.count
     }
     
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return visibleFieldsIn(section: section).count
+    }
+    
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sections[section].title
     }
@@ -79,12 +83,8 @@ extension Form: UITableViewDataSource {
         return sections[section].footerView ?? UIView()
     }
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].fields.count
-    }
-    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let field = sections[indexPath.section].fields[indexPath.row]
+        let field = visibleFieldsIn(section: indexPath.section)[indexPath.row]
         return tableView.dequeueFormCell(with: field, indexPath: indexPath)
     }
     
