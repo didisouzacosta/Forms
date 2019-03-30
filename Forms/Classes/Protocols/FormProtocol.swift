@@ -16,7 +16,6 @@ public protocol FormProtocol: Validatable {
     mutating func remove(section: FormSectionProtocol)
     mutating func remove(sections: [FormSectionProtocol])
     
-    func indexPath(at field: FormFieldProtocol) -> IndexPath?
     func scroll(to indexPath: IndexPath)
     func scroll(to field: FormFieldProtocol)
     func reloadData()
@@ -25,9 +24,14 @@ public protocol FormProtocol: Validatable {
 
 fileprivate struct AssociatedKeys {
     static var sectionsKey = "sections.key"
+    static var visibilityManagerKey = "visibilityManager.key"
 }
 
 extension FormProtocol {
+    
+    public var visibleCells: [FormCell] {
+        return tableView?.visibleCells as? [FormCell] ?? []
+    }
     
     public var sections: [FormSectionProtocol] {
         return _sections
@@ -39,18 +43,6 @@ extension FormProtocol {
     
     public var errors: [Error] {
         return sections.flatMap { $0.fields.flatMap { $0.errors } }
-    }
-    
-    private var _sections: [FormSectionProtocol] {
-        get { return objc_getAssociatedObject(self, &AssociatedKeys.sectionsKey) as? [FormSectionProtocol] ?? [] }
-        set {
-            objc_setAssociatedObject(self, &AssociatedKeys.sectionsKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            reloadData()
-        }
-    }
-    
-    internal func visibleFieldsIn(section: Int) -> [FormFieldProtocol] {
-        return sections[section].fields.filter { !$0.isHidden }
     }
     
     public mutating func add(section: FormSectionProtocol, position: Int? = nil) {
@@ -78,19 +70,6 @@ extension FormProtocol {
         sections.forEach { remove(section: $0) }
     }
     
-    public func indexPath(at field: FormFieldProtocol) -> IndexPath? {
-        var indexPath: IndexPath?
-        
-        sections.enumerated().forEach { sectionIndex, section in
-            if let fieldIndex = section.fields.firstIndex(where: { $0.identifier == field.identifier }) {
-                indexPath = IndexPath(row: fieldIndex, section: sectionIndex)
-                return
-            }
-        }
-        
-        return indexPath
-    }
-    
     public func scroll(to indexPath: IndexPath) {
         tableView?.scrollToRow(at: indexPath, at: .middle, animated: true)
     }
@@ -101,7 +80,7 @@ extension FormProtocol {
     }
     
     public func reloadData() {
-        tableView?.reloadData()
+        sections.flatMap { $0.fields }.forEach { $0.reload() }
     }
     
     public func validate() throws {
@@ -117,4 +96,92 @@ extension FormProtocol {
         }
     }
     
+    private var _sections: [FormSectionProtocol] {
+        get { return objc_getAssociatedObject(self, &AssociatedKeys.sectionsKey) as? [FormSectionProtocol] ?? [] }
+        set {
+            objc_setAssociatedObject(self, &AssociatedKeys.sectionsKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            reloadData()
+        }
+    }
+    
+    private var visibilityManager: VisibilityManager? {
+        get {
+            if let visibilityManager = objc_getAssociatedObject(self, &AssociatedKeys.visibilityManagerKey) as? VisibilityManager {
+                return visibilityManager
+            } else if let tableView = tableView {
+                let visibilityManager = VisibilityManager(tableView: tableView, fields: sections.flatMap { $0.fields })
+                objc_setAssociatedObject(self, &AssociatedKeys.visibilityManagerKey, visibilityManager, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+                return visibilityManager
+            } else {
+                return nil
+            }
+        }
+    }
+    
+    internal func visibleFields(at section: Int) -> [FormFieldProtocol] {
+        return sections[section].fields.filter { !$0.isHidden }
+    }
+    
+    internal func visibleField(at indexPath: IndexPath) -> FormFieldProtocol {
+        return visibleFields(at: indexPath.section)[indexPath.row]
+    }
+    
+    internal func toggleVisibility() {
+        visibilityManager?.toggleVisibility()
+    }
+    
+    internal func indexPath(at field: FormFieldProtocol) -> IndexPath? {
+        var indexPath: IndexPath?
+        
+        sections.enumerated().forEach { sectionIndex, section in
+            if let fieldIndex = section.fields.firstIndex(where: { $0.identifier == field.identifier }) {
+                indexPath = IndexPath(row: fieldIndex, section: sectionIndex)
+                return
+            }
+        }
+        
+        return indexPath
+    }
+    
+}
+
+class VisibilityManager: NSObject {
+
+    // MARK: - Private Variables
+
+    private weak var tableView: UITableView?
+    private var fields: [FormFieldProtocol] = []
+
+    // MARK: - Life Cycle
+
+    init(tableView: UITableView, fields: [FormFieldProtocol]) {
+        self.tableView = tableView
+        self.fields = fields
+    }
+
+    // MARK: - Public Methods
+
+    func toggleVisibility() {
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(adjustVibility), object: nil)
+        perform(#selector(adjustVibility), with: nil, afterDelay: 0.1)
+    }
+
+    // MARK: - Private Methods
+
+    @objc private func adjustVibility() {
+        let sections = fields
+            .compactMap({ $0.indexPath })
+            .reduce([]) { (result, indexPath) -> [Int] in
+                if result.contains(where: { $0 == indexPath.section }) {
+                    return result
+                } else {
+                    return result + [indexPath.section]
+                }
+        }
+        
+        tableView?.beginUpdates()
+        tableView?.reloadSections(IndexSet(sections), with: .none)
+        tableView?.endUpdates()
+    }
+
 }

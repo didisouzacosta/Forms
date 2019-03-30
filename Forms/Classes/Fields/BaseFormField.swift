@@ -35,7 +35,11 @@ public class BaseFormField<T: Equatable>: FormFieldProtocol {
         didSet {
             guard oldValue != value else { return }
             self.oldValue = oldValue
-            valueUpdatedHandlers.forEach { $0(value, oldValue) }
+            DispatchQueue.main.async { [weak self] in
+                self?.valueUpdatedHandlers.forEach { [weak self] handler in
+                    handler(self?.value, oldValue)
+                }
+            }
             _ = try? validate()
         }
     }

@@ -17,38 +17,30 @@ class ViewController: UIViewController {
     
     var firstSection = SectionForm(title: "Dados Pessoais")
     
-    let nameField = TextFormField(title: "Nome completo", placeholder: "Insira seu nome aqui")
+    let nameField = TextFormField(title: "Nome completo", placeholder: "Insira seu nome.")
     let emailField = TextFormField(title: "Email", placeholder: "Ex: email@email.com.br")
     
     lazy var switchField: SwitchFormField = {
-        let field = SwitchFormField(title: "Label \(1)")
-        field.rules = [RequiredFormRule(message: "O campo \(1) é obrigatório.")]
+        let field = SwitchFormField(value: false, title: "Label \(1)")
+        field.valueUpdated() { [weak self] (value, _) in
+            let value = !(value ?? false)
+            self?.nameField.isHidden = value
+//            self?.emailField.isHidden = value
+        }
         return field
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let nameField = TextFormField(title: "Nome completo", placeholder: "Insira seu nome aqui")
-//        nameField.rules = [
-//            RequiredFormRule(message: "O campo 'Nome' é obrigatório."),
-//            ExactLenghFormRule(exactLenght: 7, message: "O campo nome deve ter exatamente 7 caracters")
-//        ]
-        
-//        let emailField = TextFormField(title: "Email", placeholder: "Ex: email@email.com.br")
-//        emailField.rules = [
-//            RequiredFormRule(message: "O campo 'Email' é obrigatório.")
-//        ]
-        
         let birthdayField = DateFormField(title: "Nascimento", placeholder: "Informe sua data de nascimento")
         birthdayField.rules = [
             RequiredFormRule(message: "O campo 'Aniversário' e obrigatório.")
         ]
         
-        firstSection.add(fields: [switchField] + [nameField, emailField])
+        firstSection.add(fields: [switchField, nameField, emailField])
         
         form.add(sections: [firstSection])
-        
     }
     
     private func show(error: Error) {
@@ -58,11 +50,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction private func scroll() {
-        let isHidden = !nameField.isHidden
-//        switchField.isHidden = isHidden
-        nameField.isHidden = isHidden
-//        emailField.isHidden = isHidden
-//        try? form.validate()
+        do {
+            try form.validate()
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 
 }

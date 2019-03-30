@@ -17,6 +17,15 @@ public class BaseFormFieldCell<T: FormFieldProtocol>: FormFieldCell {
     weak var errorLabel: UILabel? { return nil }
     weak var contentStack: UIStackView? { return nil }
     
+    public var indexPath: IndexPath? {
+        return field?.indexPath
+    }
+    
+    public override var isHidden: Bool {
+        get { return field?.isHidden ?? false }
+        set { field?.isHidden = newValue }
+    }
+    
     public override var isUserInteractionEnabled: Bool {
         get { return field?.isEnabled ?? true }
         set { field?.isEnabled = newValue }

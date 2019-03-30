@@ -46,19 +46,21 @@ public extension FormFieldProtocol {
     }
     
     func reload() {
-        let tableView = section?.form?.tableView
+        guard let tableView = section?.form?.tableView,
+            let indexPath = indexPath,
+            let cell = tableView.cellForRow(at: indexPath) as? FormCell else { return }
         
-        tableView?.beginUpdates()
-        
-        (tableView?.indexPathsForVisibleRows ?? [])
-            .compactMap { tableView?.cellForRow(at: $0) as? FormFieldCell }
-            .forEach { $0.setupContent() }
-        
-        tableView?.endUpdates()
+        tableView.beginUpdates()
+        cell.setupContent()
+        tableView.endUpdates()
     }
     
     func scroll() {
         section?.form?.scroll(to: self)
+    }
+    
+    internal var indexPath: IndexPath? {
+        return section?.form?.indexPath(at: self)
     }
     
     internal var section: FormSectionProtocol? {
@@ -76,23 +78,8 @@ public extension FormFieldProtocol {
         set {
             guard newValue != _isHidden else { return }
             objc_setAssociatedObject(self, &AssociatedKeys.isHiddenKey, newValue, .OBJC_ASSOCIATION_ASSIGN)
-            toggleVisibility(newValue)
+            section?.form?.toggleVisibility()
         }
-    }
-    
-    internal func toggleVisibility(_ isHidden: Bool) {
-        guard let tableView = section?.form?.tableView,
-            let indexPath = section?.form?.indexPath(at: self) else { return }
-        
-        tableView.beginUpdates()
-        
-        if isHidden {
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-        } else {
-            tableView.insertRows(at: [indexPath], with: .automatic)
-        }
-            
-        tableView.endUpdates()
     }
     
 }

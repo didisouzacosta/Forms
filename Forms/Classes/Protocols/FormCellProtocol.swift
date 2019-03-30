@@ -13,6 +13,8 @@ public protocol FormCellProtocol: class {
     
     static var identifier: String { get }
     var reuseIdentifier: String? { get }
+    var indexPath: IndexPath? { get }
+    var isHidden: Bool { get set }
     
     func setup(with field: FormFieldProtocol)
     func setupContent()

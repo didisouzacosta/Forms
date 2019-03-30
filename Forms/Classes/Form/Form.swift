@@ -53,7 +53,7 @@ extension Form: UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return visibleFieldsIn(section: section).count
+        return visibleFields(at: section).count
     }
     
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -84,16 +84,8 @@ extension Form: UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let field = visibleFieldsIn(section: indexPath.section)[indexPath.row]
-        return tableView.dequeueFormCell(with: field, indexPath: indexPath)
-    }
-    
-}
-
-extension UITableView {
-    
-    func dequeueFormCell(with field: FormFieldProtocol, indexPath: IndexPath) -> FormCell {
-        let cell = dequeueReusableCell(withIdentifier: field.cellIdentifier, for: indexPath) as! FormCell
+        let field = visibleField(at: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: field.cellIdentifier, for: indexPath) as! FormCell
         cell.setup(with: field)
         return cell
     }
